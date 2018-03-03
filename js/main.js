@@ -54,6 +54,12 @@ $(document).ready(function() {
 		return false;
 	});
 
+	$('#nav_timeline').click(function() {
+		var nav_top = $('#timeline').offset().top;
+		$('html, body').animate({scrollTop: nav_top}, 400);
+		return false;
+	});
+
 	$('.skills_popup, .skills_table .exit').click(function() {
 		TweenLite.to($('.skills_popup, .skills_table'),.5,{opacity:0, onComplete:removeFunction});
 		function removeFunction() {$('.skills_popup').removeClass('on');}
