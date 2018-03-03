@@ -6,6 +6,9 @@
 	        border-radius: $params;
 }
 
+
+/* Public */
+
 body {
   padding-top: 54px;
 }
@@ -70,26 +73,28 @@ a {
 	}
 }
 
-ul.navbar-nav li.nav-item:nth-last-child(1) {
-	border-right: 1px solid #78CF3B;
+.dark-green {
+	color: #317600 !important;
 }
 
-.navbar-collapse {
-  display: flex !important;
-  flex-basis: auto;
+.bold {
+	font-weight: bold;
 }
 
-.navbar-nav {
-	flex-direction: row;
-}
-
-.nav-item {
+[data-text] {
 	position: relative;
-	&.hide {
-		display: none;
-	}
-	&.hide-reverse {
-		display: unset;
+	display: inline-block;
+	&:before {
+		position: absolute;
+		content: attr(data-text);
+		bottom: 0;
+		right: -.5rem;
+		transform: translate(100%,0);
+		font-size: 1rem;
+		font-weight: 600;
+		font-style: italic;
+		letter-spacing: 1px;
+		color: #5cbe15;
 	}
 }
 
@@ -141,6 +146,32 @@ ul.navbar-nav li.nav-item:nth-last-child(1) {
 		pointer-events: unset;
 		opacity: 1;
 		transition: opacity .3s;
+	}
+}
+
+
+/* Private */
+
+ul.navbar-nav li.nav-item:nth-last-child(1) {
+	border-right: 1px solid #78CF3B;
+}
+
+.navbar-collapse {
+  display: flex !important;
+  flex-basis: auto;
+}
+
+.navbar-nav {
+	flex-direction: row;
+}
+
+.nav-item {
+	position: relative;
+	&.hide {
+		display: none;
+	}
+	&.hide-reverse {
+		display: unset;
 	}
 }
 
@@ -314,23 +345,6 @@ ul.navbar-nav li.nav-item:nth-last-child(1) {
 	}
 }
 
-[data-text] {
-	position: relative;
-	display: inline-block;
-	&:before {
-		position: absolute;
-		content: attr(data-text);
-		bottom: 0;
-		right: -.5rem;
-		transform: translate(100%,0);
-		font-size: 1rem;
-		font-weight: 600;
-		font-style: italic;
-		letter-spacing: 1px;
-		color: #5cbe15;
-	}
-}
-
 .carousel-caption>p {
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -340,6 +354,30 @@ ul.navbar-nav li.nav-item:nth-last-child(1) {
 	word-wrap:break-word;
 	line-height: 1.2rem;
 	height: 3.6rem;
+}
+
+footer {
+	.container {
+		.footer {
+			font-size: .9rem;
+			margin-bottom: 1.5rem !important;
+			a {
+				color: #fff;
+				padding: 0 .5rem;
+				border-right: 1px solid #5cbe15;
+				&:hover, &:focus {
+					color: #5BBE15;
+				}
+				&:nth-child(1) {padding-left: 0;}
+				&:nth-last-child(1) {border-right: none;}
+			}
+		}
+		p {
+				font-size: .9rem;
+				color: #ccc;
+				margin: 0;
+		}
+	}
 }
 
 @media (max-width: 1000px) {
