@@ -493,7 +493,7 @@ html, body {
           width: 100%; }
         .work .work_wrap .work_content .work_repeat .work_tooltip {
           text-align: left; }
-          .work .work_wrap .work_content .work_repeat .work_tooltip h3 {
+          .work .work_wrap .work_content .work_repeat .work_tooltip h1 {
             font-size: 3rem;
             font-weight: bold; }
           .work .work_wrap .work_content .work_repeat .work_tooltip > ul li.desc, .work .work_wrap .work_content .work_repeat .work_tooltip p {

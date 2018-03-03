@@ -95,88 +95,36 @@
 						</div>
 					</div>
 				</section>
-				<section id="work">
+				<section id="work" ng-controller="worksCtrl">
 					<div class="work">
 						<div class="work_wrap">
 							<div class="work_title">Work</div>
 							<article class="work_content">
 
-								<section class="work_repeat row mb-5" slide>
-									<div class="work_img col-lg-6 col-md-12"><img src="image/kuksiwon.png"></div>
+								<section class="work_repeat row mb-5" slide ng-repeat="x in dataset">
+									<div class="work_img col-lg-6 col-md-12"><img src="{{x.img}}"></div>
 									<div class="work_tooltip col-lg-6 col-md-12">
-										<h3 data-num="01">한국보건의료인국가시험원 메인페이지</h3>
+										<h1 data-num="{{x.num}}">{{x.title}}</h1>
 										<ul>
-											<li class="desc"><strong>ViewPort</strong><span>Original : 데스크탑 / Renewal : 반응형</span></li>
+											<li class="desc"><strong>ViewPort</strong><span>{{x.viewport}}</span></li>
 											<li class="desc" style="display: flex; align-items: center;">
 												<strong>Palette</strong>
 												<span>
 													<ul class="palette">
-														<li data-color="#5cbe15" style="background-color: #5cbe15;"></li>
-														<li data-color="#61baff" style="background-color: #61baff;"></li>
-														<li data-color="#fb7878" style="background-color: #fb7878;"></li>
+														<li data-color="{{x.palette1}}" style="background-color: {{x.palette1}};"></li>
+														<li ng-if="x.palette2" data-color="{{x.palette2}}" style="background-color: {{x.palette2}};"></li>
+														<li ng-if="x.palette3" data-color="{{x.palette3}}" style="background-color: {{x.palette3}};"></li>
 													</ul>
 												</span>
 											</li>
 										</ul>
 										<div>
-											<p>기존 관리하고 있던 한국보건의료인국가시험원의 메인 페이지를 리뉴얼 하였습니다. css를 최대한 활용하여 불필요한 이미지를 제거하고 가독성을 극대화하였습니다.</p>
-											<p>공공기관 사이트로서 보다 많은 사용자 환경에 대응하기 위해 익스플로러 8까지의 호환성 지원, 웹 접근성 관리가 되어 있습니다.</p>
+											<p>{{x.content1}}</p>
+											<p>{{x.content2}}</p>
 										</div>
 										<div class="button_wrap">
-											<div><a href="http://www.kuksiwon.or.kr/Examination/Default.aspx" target="_blank" class="button">Original Page</a></div>
-											<div><a href="kuksiwon.html" target="_blank" class="button">Renewal Page</a></div>
-										</div>
-									</div>
-								</section>
-
-								<section class="work_repeat row mb-5" slide>
-									<div class="work_img col-lg-6 col-md-12"><img src="image/kuksiwon_attendance.png"></div>
-									<div class="work_tooltip col-lg-6 col-md-12">
-										<h3 data-num="02">한국보건의료인국가시험원 근태관리 시스템</h3>
-										<ul>
-											<li class="desc"><strong>ViewPort</strong><span>반응형</span></li>
-											<li class="desc" style="display: flex; align-items: center;">
-												<strong>Palette</strong>
-												<span>
-													<ul class="palette">
-														<li data-color="#fb7878" style="background-color: #fb7878;"></li>
-													</ul>
-												</span>
-											</li>
-										</ul>
-										<div>
-											<p>기존 관리하고 있던 한국보건의료인국가시험원의 메인 페이지를 리뉴얼 하였습니다. css를 최대한 활용하여 불필요한 이미지를 제거하고 가독성을 극대화하였습니다.</p>
-											<p>공공기관 사이트로서 보다 많은 사용자 환경에 대응하기 위해 익스플로러 8까지의 호환성 지원, 웹 접근성 관리가 되어 있습니다.</p>
-										</div>
-										<div class="button_wrap">
-											<div><a href="javascript:window.open('kuksiwon_attendance.html','','width=950,height=500,menubar=no,scrollbars=no,status=no')" target="_blank" class="button">Sample Page</a></div>
-										</div>
-									</div>
-								</section>
-
-								<section class="work_repeat row mb-5" slide>
-									<div class="work_img col-lg-6 col-md-12"><img src="image/dasom.png"></div>
-									<div class="work_tooltip col-lg-6 col-md-12">
-										<h3 data-num="03">다솜 엔터테인먼트 웹 페이지</h3>
-										<ul>
-											<li class="desc"><strong>ViewPort</strong><span>반응형</span></li>
-											<li class="desc" style="display: flex; align-items: center;">
-												<strong>Palette</strong>
-												<span>
-													<ul class="palette">
-														<li data-color="#e8554e" style="background-color: #e8554e;"></li>
-														<li data-color="#03af88" style="background-color: #03af88;"></li>
-														<li data-color="#8d6fbc" style="background-color: #8d6fbc;"></li>
-													</ul>
-												</span>
-											</li>
-										</ul>
-										<div>
-											<p>다솜 엔터테인먼트의 웹 페이지입니다.</p>
-											<p>홈페이지 사용자의 대상 및 환경을 고려하여 스마트폰, 태블릿 등에서도 이용할 수 있도록 반응형 웹 방식으로 구현하였습니다.</p>
-										</div>
-										<div class="button_wrap">
-											<div><a href="http://www.dearmystar.com/" target="_blank" class="button">Original Page</a></div>
+											<div><a href="{{x.button_href1}}" target="_blank" class="button">{{x.button_name1}}</a></div>
+											<div ng-if="x.button_name2"><a href="{{x.button_href2}}" target="_blank" class="button">{{x.button_name2}}</a></div>
 										</div>
 									</div>
 								</section>
