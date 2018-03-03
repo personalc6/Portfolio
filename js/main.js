@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 		$('[highlight_ani]').each(function() {
 			var objectBottom = $(this).offset().top+ $(this).outerHeight();
-			var windowBottom = $(window).scrollTop() + ($(window).height() * 0.6);
+			var windowBottom = $(window).scrollTop() + ($(window).height() * 0.95);
 
 			if(windowBottom > objectBottom)
 				$(this).addClass('on');
