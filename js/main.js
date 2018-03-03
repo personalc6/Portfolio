@@ -23,16 +23,16 @@ $(document).ready(function() {
 			});
 
 			$('[slide]').each(function() {
-				var objectBottom = $(this).offset().top+ $(this).outerHeight();
-				var windowBottom = $(window).scrollTop() + ($(window).height());
+				var objectBottom = $(this).offset().top;
+				var windowBottom = $(window).scrollTop() + ($(window).height() * 0.7);
 
 				if(windowBottom > objectBottom)
 					$(this).addClass('slide');
 			});
 
 			$('[timeline]').each(function() {
-				var objectBottom = $(this).offset().top+ $(this).outerHeight();
-				var windowBottom = $(window).scrollTop() + ($(window).height() * 0.95);
+				var objectBottom = $(this).offset().top;
+				var windowBottom = $(window).scrollTop() + ($(window).height());
 
 				if(windowBottom > objectBottom)
 					$(this).addClass('on');
