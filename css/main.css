@@ -545,7 +545,7 @@ html, body {
         font-size: 2rem;
         font-weight: bold; }
       .timeline .timeline-repeat .timeline-wrap .timeline-content-wrap .timeline-content {
-        font-size: 1rem; }
+        font-size: 1.5rem; }
   .timeline .timeline-repeat:nth-child(odd) .timeline-empty, .timeline .timeline-repeat:nth-child(even) .timeline-wrap {
     position: relative;
     border-right: 1px solid #ccc;
