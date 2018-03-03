@@ -1,35 +1,44 @@
 $(document).ready(function() {
-	$(window).scroll(function() {
-		if($(document).scrollTop() >= $(window).height())
-			$('.header').addClass('on');	//scrollTop > headerTop
-		else 
-			$('.header').removeClass('on');	//scrollTop < headerTop
+	var agent = navigator.userAgent.toLowerCase();
+	if ( (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
+	    // result is IE
+	    $('.header').addClass('on');
+	    $('[highlight_ani]').addClass('on');
+	    $('[slide]').addClass('slide');
+	    $('[timeline]').addClass('on');
+	}else{
+	    // result is not IE
+		$(window).scroll(function() {
+			if($(document).scrollTop() >= $(window).height())
+				$('.header').addClass('on');	//scrollTop > headerTop
+			else 
+				$('.header').removeClass('on');	//scrollTop < headerTop
 
-		$('[highlight_ani]').each(function() {
-			var objectBottom = $(this).offset().top+ $(this).outerHeight();
-			var windowBottom = $(window).scrollTop() + ($(window).height() * 0.95);
+			$('[highlight_ani]').each(function() {
+				var objectBottom = $(this).offset().top+ $(this).outerHeight();
+				var windowBottom = $(window).scrollTop() + ($(window).height() * 0.95);
 
-			if(windowBottom > objectBottom)
-				$(this).addClass('on');
+				if(windowBottom > objectBottom)
+					$(this).addClass('on');
+			});
+
+			$('[slide]').each(function() {
+				var objectBottom = $(this).offset().top+ $(this).outerHeight();
+				var windowBottom = $(window).scrollTop() + ($(window).height());
+
+				if(windowBottom > objectBottom)
+					$(this).addClass('slide');
+			});
+
+			$('[timeline]').each(function() {
+				var objectBottom = $(this).offset().top+ $(this).outerHeight();
+				var windowBottom = $(window).scrollTop() + ($(window).height() * 0.95);
+
+				if(windowBottom > objectBottom)
+					$(this).addClass('on');
+			});
 		});
-
-		$('[timeline]').each(function() {
-			var objectBottom = $(this).offset().top+ $(this).outerHeight();
-			var windowBottom = $(window).scrollTop() + ($(window).height() * 0.95);
-
-			if(windowBottom > objectBottom)
-				$(this).addClass('on');
-		});
-
-		$('[slide]').each(function() {
-			var objectBottom = $(this).offset().top+ $(this).outerHeight();
-			var windowBottom = $(window).scrollTop() + ($(window).height());
-
-			if(windowBottom > objectBottom)
-				$(this).addClass('slide');
-		});
-
-	});
+	}
 
 	$('#nav_home').click(function() {
 		var nav_top = $('#home').offset().top;
@@ -63,5 +72,9 @@ $(document).ready(function() {
 	$('.skills_popup, .skills_table .exit').click(function() {
 		TweenLite.to($('.skills_popup, .skills_table'),.5,{opacity:0, onComplete:removeFunction});
 		function removeFunction() {$('.skills_popup').removeClass('on');}
+	});
+
+	$('[data-color]').each(function() {
+		$(this).css('background-color',$(this).data('color'));
 	});
 });

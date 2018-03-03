@@ -18,7 +18,6 @@
 		<script src="js/TweenMax.min.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/table.js"></script>
-		<script src="js/animation.js"></script>
 		<title>포트폴리오 | 임재성</title>
 	</head>
 	<body ng-app="myApp">
@@ -26,11 +25,11 @@
 			<header class="header">
 				<nav>
 					<ul>
-						<li><a id="nav_home" href="#">HOME</a></li>
-						<li><a id="nav_about" href="#">ABOUT</a></li>
-						<li><a id="nav_skills" href="">SKILLS</a></li>
-						<li><a id="nav_work" href="#">WORK</a></li>
-						<li><a id="nav_timeline" href="#">TIMELINE</a></li>
+						<li><a id="nav_home" href="#" lang="en">HOME</a></li>
+						<li><a id="nav_about" href="#" lang="en">ABOUT</a></li>
+						<li><a id="nav_skills" href="" lang="en">SKILLS</a></li>
+						<li><a id="nav_work" href="#" lang="en">WORK</a></li>
+						<li><a id="nav_timeline" href="#" lang="en">TIMELINE</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -40,8 +39,8 @@
 						<div class="title">
 							<div class="title_line"></div>
 							<div class="title_text">
-								<p>Im Jae Seong</p>
-								<p>web programmer</p>
+								<p lang="en">Im Jae Seong</p>
+								<p lang="en">web programmer</p>
 							</div>
 							<section class="icon">
 								<div class="phone"><a class="title_icon" href="tel:010-4017-7274" data-content="010-4017-7274"></a></div>
@@ -55,7 +54,7 @@
 						<div class="skills_popup"></div>
 						<div class="skills_table">
 							<span class="exit">x</span>
-							<table class="table" ng-controller="tableCtrl">
+							<table class="table" ng-controller="tableCtrl" lang="en">
 								<thead>
 									<tr>
 										<th>Category</th>
@@ -73,7 +72,7 @@
 							</table>
 						</div>
 						<div class="about_wrap">
-							<div class="about_title">About</div>
+							<div class="about_title" lang="en">About</div>
 							<div class="about_text">
 								<p>
 									안녕하세요, 많은 사람들에게 도움이 되는 웹사이트를 제작하는 개발자 임재성입니다.<br/>
@@ -99,7 +98,7 @@
 				<section id="work" ng-controller="worksCtrl">
 					<div class="work">
 						<div class="work_wrap">
-							<div class="work_title">Work</div>
+							<div class="work_title" lang="en">Work</div>
 							<article class="work_content">
 
 								<section class="work_repeat row mb-5" slide ng-repeat="x in dataset">
@@ -107,14 +106,14 @@
 									<div class="work_tooltip col-lg-6 col-md-12">
 										<h1 data-num="{{x.num}}">{{x.title}}</h1>
 										<ul>
-											<li class="desc"><strong>ViewPort</strong><span>{{x.viewport}}</span></li>
-											<li class="desc" style="display: flex; align-items: center;">
+											<li class="desc" lang="en"><strong>ViewPort</strong><span>{{x.viewport}}</span></li>
+											<li class="desc" style="display: flex; align-items: center;" lang="en">
 												<strong>Palette</strong>
 												<span>
 													<ul class="palette">
-														<li data-color="{{x.palette1}}" style="background-color: {{x.palette1}};"></li>
-														<li ng-if="x.palette2" data-color="{{x.palette2}}" style="background-color: {{x.palette2}};"></li>
-														<li ng-if="x.palette3" data-color="{{x.palette3}}" style="background-color: {{x.palette3}};"></li>
+														<li data-color="{{x.palette1}}"></li>
+														<li ng-if="x.palette2" data-color="{{x.palette2}}"></li>
+														<li ng-if="x.palette3" data-color="{{x.palette3}}"></li>
 													</ul>
 												</span>
 											</li>
@@ -124,8 +123,8 @@
 											<p>{{x.content2}}</p>
 										</div>
 										<div class="button_wrap">
-											<div><a href="{{x.button_href1}}" target="_blank" class="button">{{x.button_name1}}</a></div>
-											<div ng-if="x.button_name2"><a href="{{x.button_href2}}" target="_blank" class="button">{{x.button_name2}}</a></div>
+											<div><a href="{{x.button_href1}}" target="_blank" class="button" lang="en">{{x.button_name1}}</a></div>
+											<div ng-if="x.button_name2"><a href="{{x.button_href2}}" target="_blank" class="button" lang="en">{{x.button_name2}}</a></div>
 										</div>
 									</div>
 								</section>
@@ -135,7 +134,7 @@
 					</div>
 				</section>
 				<section id="timeline" ng-controller="timelineCtrl">
-					<div class="row timeline" >
+					<div class="row timeline">
 						<div class="col-lg-12 timeline-start">
 							<div class="circle-start" timeline>start</div>
 						</div>

@@ -12,6 +12,28 @@ $blue: #30b7e8;
     font-weight: 700;
     src: url('../font/PureunJeonnam-Bold.woff') format('woff');
 }
+@font-face{
+ font-family:'LotteMartDream';
+ font-style:normal;
+ font-weight:400;
+ src:url('../font/LotteMartDreamMedium.woff2') format('woff2'),
+     url('../font/LotteMartDreamMedium.woff') format('woff');
+}
+@font-face{
+ font-family:'LotteMartDream';
+ font-style:normal;
+ font-weight:700;
+ src:url('../font/LotteMartDreamBold.woff2') format('woff2'),
+     url('../font/LotteMartDreamBold.woff') format('woff');
+}
+@font-face{
+ font-family:'LotteMartDream';
+ font-style:normal;
+ font-weight:300;
+ src:url('../font/LotteMartDreamLight.woff2') format('woff2'),
+     url('../font/LotteMartDreamLight.woff') format('woff');
+}
+
 
 @mixin mixin-border-radius($params) {
 	-webkit-border-radius: $params;
@@ -25,7 +47,11 @@ $blue: #30b7e8;
 
 /* Public */
 
-* {
+*:lang(ko) {
+	font-family: 'LotteMartDream', 'Sans-serif';
+	font-weight: 300;
+}
+*:lang(en) {
 	font-family: 'PureunJeonnam', 'Sans-serif';
 }
 
@@ -174,6 +200,8 @@ html, body {
 	.title .title_line:before, .title .title_line:after {
 		position: absolute;
 		content: "";
+		left: 0;
+		top: 0;
 		width: 100%;
 		height: 100%;
 	}
@@ -213,6 +241,8 @@ html, body {
 		margin: 0 auto;
 		.title_line {
 			position: absolute;
+			left: 5%;
+			top: 5%;
 			width: 90%;
 			height: 90%;
 		}
@@ -416,8 +446,8 @@ html, body {
 	background-color: rgba(0,0,0,.5);
 	z-index: 100;
 	&.on {
-		display: unset;
-		& ~ .skills_table {display: unset;}
+		display: block;
+		& ~ .skills_table {display: block;}
 	}
 }
 
