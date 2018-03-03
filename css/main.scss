@@ -21,6 +21,10 @@ $blue: #30b7e8;
 	        border-radius: $params;
 }
 
+
+
+/* Public */
+
 * {
 	font-family: 'PureunJeonnam', 'Sans-serif';
 }
@@ -68,6 +72,78 @@ html, body {
 	margin: 0;
 }
 
+[data-num]:before {
+	position: relative;
+	display: inline-block;
+	content: attr(data-num);
+	color: $blue;
+	margin-right: 20px;
+	font-size: 40px
+}
+
+.palette {
+	display: flex;
+	padding: 0;
+}
+
+[data-color] {
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0 5px 0 0;
+	@include mixin-border-radius(4px);
+	&:before {
+		position: absolute;
+		content: attr(data-color);
+		left: 50%;
+		top: -40px;
+		transform: translate(-50%,0);
+		white-space: nowrap;
+		color: #fff;
+		background-color: rgba(0,0,0,.8);
+		padding: 5px 10px;
+		opacity: 0;
+		transition: opacity .3s;
+	}
+
+	&:hover:before {
+		opacity: 1;
+	}
+}
+
+.button_wrap {
+	display: block;
+	text-align: center;
+	margin: 30px 0;
+	div {
+		position: relative;
+		display: inline-block;
+	}
+}
+
+.button {
+	color: $blue !important;
+	border: 2px solid $blue;
+	padding: 10px 15px;
+	font-weight: bold;
+	@include mixin-border-radius(3px);
+	transition: background-color .3s, color .3s;
+	&:hover {
+		color: #fff !important;
+		background-color: $blue;
+	}
+}
+
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+/* Private */
+
 .header {
 	position: fixed;
 	width: 100%;
@@ -80,6 +156,10 @@ html, body {
 	a:link, a:visited {
 		color: #fff;
 		text-decoration: none;
+	}
+	&.on {
+		background-color: rgba(0,0,0,1);
+		box-shadow: 0 1px 10px 5px rgba(0,0,0,.3);
 	}
 }
 
@@ -494,70 +574,8 @@ html, body {
 	}
 }
 
-[data-num]:before {
-	position: relative;
-	display: inline-block;
-	content: attr(data-num);
-	color: $blue;
-	margin-right: 20px;
-	font-size: 40px
-}
-
-.palette {
-	display: flex;
-	padding: 0;
-}
-
-[data-color] {
-	position: relative;
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	margin: 0 5px 0 0;
-	@include mixin-border-radius(4px);
-	&:before {
-		position: absolute;
-		content: attr(data-color);
-		left: 50%;
-		top: -40px;
-		transform: translate(-50%,0);
-		white-space: nowrap;
-		color: #fff;
-		background-color: rgba(0,0,0,.8);
-		padding: 5px 10px;
-		opacity: 0;
-		transition: opacity .3s;
-	}
-
-	&:hover:before {
-		opacity: 1;
-	}
-}
-
-.button_wrap {
-	display: block;
-	text-align: center;
-	margin: 30px 0;
-	div {
-		position: relative;
-		display: inline-block;
-	}
-}
-
-.button {
-	color: $blue !important;
-	border: 2px solid $blue;
-	padding: 10px 15px;
-	font-weight: bold;
-	@include mixin-border-radius(3px);
-	transition: background-color .3s, color .3s;
-	&:hover {
-		color: #fff !important;
-		background-color: $blue;
-	}
-}
-
 .timeline {
+	margin: 0 !important;
 	.timeline-start {
 		display: flex;
 		justify-content: center;
@@ -682,6 +700,25 @@ html, body {
 				background-color: $yellow;
 			}
 		}
+	}
+}
+
+.face {
+	background-color: #333;
+	.myface {
+		width: 15rem;
+		height: 15rem;
+		margin: 4rem;
+		background-image: url("../image/face.jpg");
+		background-size: 15rem;
+		@include mixin-border-radius(15rem);
+	}
+	.myinfo {
+		display: flex;
+		color: #fff;
+		height: 15rem;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 }
 

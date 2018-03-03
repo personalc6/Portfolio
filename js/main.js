@@ -1,9 +1,9 @@
 $(document).ready(function() {
 	$(window).scroll(function() {
 		if($(document).scrollTop() >= $(window).height())
-			$('.header').css('background-color','rgba(0,0,0,1)');	//scrollTop > headerTop
+			$('.header').addClass('on');	//scrollTop > headerTop
 		else 
-			$('.header').css('background-color','rgba(0,0,0,.5)');	//scrollTop < headerTop
+			$('.header').removeClass('on');	//scrollTop < headerTop
 
 		$('[highlight_ani]').each(function() {
 			var objectBottom = $(this).offset().top+ $(this).outerHeight();

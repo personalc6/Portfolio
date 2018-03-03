@@ -34,171 +34,188 @@
 				</nav>
 			</header>
 			<main class="wrap content">
-				<section class="main" id="home">
-					<div class="title">
-						<div class="title_line"></div>
-						<div class="title_text">
-							<p>Im Jae Seong</p>
-							<p>web programmer</p>
+				<section id="home">
+					<div class="main">
+						<div class="title">
+							<div class="title_line"></div>
+							<div class="title_text">
+								<p>Im Jae Seong</p>
+								<p>web programmer</p>
+							</div>
+							<section class="icon">
+								<div class="phone"><a class="title_icon" href="tel:010-4017-7274" data-content="010-4017-7274"></a></div>
+								<div class="email"><a class="title_icon" href="mailto:personalc@naver.com" data-content="personalc@naver.com"></a></div>
+							</section>
 						</div>
-						<section class="icon">
-							<div class="phone"><a class="title_icon" href="tel:010-4017-7274" data-content="010-4017-7274"></a></div>
-							<div class="email"><a class="title_icon" href="mailto:personalc@naver.com" data-content="personalc@naver.com"></a></div>
-						</section>
 					</div>
 				</section>
-				<section class="about" id="about">
-					<div class="skills_popup"></div>
-					<div class="skills_table">
-						<span class="exit">x</span>
-						<table class="table" ng-controller="tableCtrl">
-							<thead>
-								<tr>
-									<th>Category</th>
-									<th>Level</th>
-									<th>Language/Framework(Library)</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr ng-repeat="x in languages">
-									<td ng-class="{cat_program:x.category=='PROGRAM', cat_web:x.category=='WEB', cat_dbms:x.category=='DBMS'}">{{x.category}}</td>
-									<td>{{x.level}}</td>
-									<td>{{x.language}}</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="about_wrap">
-						<div class="about_title">About</div>
-						<div class="about_text">
-							<p>
-								안녕하세요, 많은 사람들에게 도움이 되는 웹사이트를 제작하는 개발자 임재성입니다.<br/>
-								저는 다년간
-								<span class="highlight" highlight_ani="프로그래밍, 네트워크, 리버스 엔지니어링, 웹개발">프로그래밍, 네트워크, 리버스 엔지니어링, 웹개발</span> 기술을 터득하여<br/>
-								일반적인 웹개발에 대한 지식은 물론 연계 서비스들에 대한 이해도가 높은 편입니다.<br/>
-								<br/>
-								<span class="highlight" highlight_ani="섬세한 성격">섬세한 성격</span>으로 웹사이트를 구현하며,<br/>
-								<span class="highlight" highlight_ani="남다른 기술력">남다른 기술력</span>으로 새로운 기술을 끊임없이 연구하고 있습니다.<br/>
-								제 웹사이트가 마음에 드신다면 언제든 연락 주세요
-							</p>
-							<div class="underline"></div>
-							<div class="skills_wrap">
-								<a class="skills">
-									<span class="text">제가 할 수 있는 것이 궁금하신가요?</span>
-									<span class="circle"></span>
-								</a>
+				<section id="about">
+					<div class="about">
+						<div class="skills_popup"></div>
+						<div class="skills_table">
+							<span class="exit">x</span>
+							<table class="table" ng-controller="tableCtrl">
+								<thead>
+									<tr>
+										<th>Category</th>
+										<th>Level</th>
+										<th>Language/Framework(Library)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="x in languages">
+										<td ng-class="{cat_program:x.category=='PROGRAM', cat_web:x.category=='WEB', cat_dbms:x.category=='DBMS'}">{{x.category}}</td>
+										<td>{{x.level}}</td>
+										<td>{{x.language}}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="about_wrap">
+							<div class="about_title">About</div>
+							<div class="about_text">
+								<p>
+									안녕하세요, 많은 사람들에게 도움이 되는 웹사이트를 제작하는 개발자 임재성입니다.<br/>
+									저는 다년간
+									<span class="highlight" highlight_ani="프로그래밍, 네트워크, 리버스 엔지니어링, 웹개발">프로그래밍, 네트워크, 리버스 엔지니어링, 웹개발</span> 기술을 터득하여<br/>
+									일반적인 웹개발에 대한 지식은 물론 연계 서비스들에 대한 이해도가 높은 편입니다.<br/>
+									<br/>
+									<span class="highlight" highlight_ani="섬세한 성격">섬세한 성격</span>으로 웹사이트를 구현하며,<br/>
+									<span class="highlight" highlight_ani="남다른 기술력">남다른 기술력</span>으로 새로운 기술을 끊임없이 연구하고 있습니다.<br/>
+									제 웹사이트가 마음에 드신다면 언제든 연락 주세요
+								</p>
+								<div class="underline"></div>
+								<div class="skills_wrap">
+									<a class="skills">
+										<span class="text">제가 할 수 있는 것이 궁금하신가요?</span>
+										<span class="circle"></span>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</section>
-				<section class="work" id="work">
-					<div class="work_wrap">
-						<div class="work_title">Work</div>
-						<article class="work_content">
+				<section id="work">
+					<div class="work">
+						<div class="work_wrap">
+							<div class="work_title">Work</div>
+							<article class="work_content">
 
-							<section class="work_repeat row mb-5" slide>
-								<div class="work_img col-lg-6 col-md-12"><img src="image/kuksiwon.png"></div>
-								<div class="work_tooltip col-lg-6 col-md-12">
-									<h3 data-num="01">한국보건의료인국가시험원 메인페이지</h3>
-									<ul>
-										<li class="desc"><strong>ViewPort</strong><span>Original : 데스크탑 / Renewal : 반응형</span></li>
-										<li class="desc" style="display: flex; align-items: center;">
-											<strong>Palette</strong>
-											<span>
-												<ul class="palette">
-													<li data-color="#5cbe15" style="background-color: #5cbe15;"></li>
-													<li data-color="#61baff" style="background-color: #61baff;"></li>
-													<li data-color="#fb7878" style="background-color: #fb7878;"></li>
-												</ul>
-											</span>
-										</li>
-									</ul>
-									<div>
-										<p>기존 관리하고 있던 한국보건의료인국가시험원의 메인 페이지를 리뉴얼 하였습니다. css를 최대한 활용하여 불필요한 이미지를 제거하고 가독성을 극대화하였습니다.</p>
-										<p>공공기관 사이트로서 보다 많은 사용자 환경에 대응하기 위해 익스플로러 8까지의 호환성 지원, 웹 접근성 관리가 되어 있습니다.</p>
+								<section class="work_repeat row mb-5" slide>
+									<div class="work_img col-lg-6 col-md-12"><img src="image/kuksiwon.png"></div>
+									<div class="work_tooltip col-lg-6 col-md-12">
+										<h3 data-num="01">한국보건의료인국가시험원 메인페이지</h3>
+										<ul>
+											<li class="desc"><strong>ViewPort</strong><span>Original : 데스크탑 / Renewal : 반응형</span></li>
+											<li class="desc" style="display: flex; align-items: center;">
+												<strong>Palette</strong>
+												<span>
+													<ul class="palette">
+														<li data-color="#5cbe15" style="background-color: #5cbe15;"></li>
+														<li data-color="#61baff" style="background-color: #61baff;"></li>
+														<li data-color="#fb7878" style="background-color: #fb7878;"></li>
+													</ul>
+												</span>
+											</li>
+										</ul>
+										<div>
+											<p>기존 관리하고 있던 한국보건의료인국가시험원의 메인 페이지를 리뉴얼 하였습니다. css를 최대한 활용하여 불필요한 이미지를 제거하고 가독성을 극대화하였습니다.</p>
+											<p>공공기관 사이트로서 보다 많은 사용자 환경에 대응하기 위해 익스플로러 8까지의 호환성 지원, 웹 접근성 관리가 되어 있습니다.</p>
+										</div>
+										<div class="button_wrap">
+											<div><a href="http://www.kuksiwon.or.kr/Examination/Default.aspx" target="_blank" class="button">Original Page</a></div>
+											<div><a href="kuksiwon.html" target="_blank" class="button">Renewal Page</a></div>
+										</div>
 									</div>
-									<div class="button_wrap">
-										<div><a href="http://www.kuksiwon.or.kr/Examination/Default.aspx" target="_blank" class="button">Original Page</a></div>
-										<div><a href="kuksiwon.html" target="_blank" class="button">Renewal Page</a></div>
-									</div>
-								</div>
-							</section>
+								</section>
 
-							<section class="work_repeat row mb-5" slide>
-								<div class="work_img col-lg-6 col-md-12"><img src="image/kuksiwon_attendance.png"></div>
-								<div class="work_tooltip col-lg-6 col-md-12">
-									<h3 data-num="02">한국보건의료인국가시험원 근태관리 시스템</h3>
-									<ul>
-										<li class="desc"><strong>ViewPort</strong><span>반응형</span></li>
-										<li class="desc" style="display: flex; align-items: center;">
-											<strong>Palette</strong>
-											<span>
-												<ul class="palette">
-													<li data-color="#fb7878" style="background-color: #fb7878;"></li>
-												</ul>
-											</span>
-										</li>
-									</ul>
-									<div>
-										<p>기존 관리하고 있던 한국보건의료인국가시험원의 메인 페이지를 리뉴얼 하였습니다. css를 최대한 활용하여 불필요한 이미지를 제거하고 가독성을 극대화하였습니다.</p>
-										<p>공공기관 사이트로서 보다 많은 사용자 환경에 대응하기 위해 익스플로러 8까지의 호환성 지원, 웹 접근성 관리가 되어 있습니다.</p>
+								<section class="work_repeat row mb-5" slide>
+									<div class="work_img col-lg-6 col-md-12"><img src="image/kuksiwon_attendance.png"></div>
+									<div class="work_tooltip col-lg-6 col-md-12">
+										<h3 data-num="02">한국보건의료인국가시험원 근태관리 시스템</h3>
+										<ul>
+											<li class="desc"><strong>ViewPort</strong><span>반응형</span></li>
+											<li class="desc" style="display: flex; align-items: center;">
+												<strong>Palette</strong>
+												<span>
+													<ul class="palette">
+														<li data-color="#fb7878" style="background-color: #fb7878;"></li>
+													</ul>
+												</span>
+											</li>
+										</ul>
+										<div>
+											<p>기존 관리하고 있던 한국보건의료인국가시험원의 메인 페이지를 리뉴얼 하였습니다. css를 최대한 활용하여 불필요한 이미지를 제거하고 가독성을 극대화하였습니다.</p>
+											<p>공공기관 사이트로서 보다 많은 사용자 환경에 대응하기 위해 익스플로러 8까지의 호환성 지원, 웹 접근성 관리가 되어 있습니다.</p>
+										</div>
+										<div class="button_wrap">
+											<div><a href="javascript:window.open('kuksiwon_attendance.html','','width=950,height=500,menubar=no,scrollbars=no,status=no')" target="_blank" class="button">Sample Page</a></div>
+										</div>
 									</div>
-									<div class="button_wrap">
-										<div><a href="javascript:window.open('kuksiwon_attendance.html','','width=950,height=500,menubar=no,scrollbars=no,status=no')" target="_blank" class="button">Sample Page</a></div>
-									</div>
-								</div>
-							</section>
+								</section>
 
-							<section class="work_repeat row mb-5" slide>
-								<div class="work_img col-lg-6 col-md-12"><img src="image/dasom.png"></div>
-								<div class="work_tooltip col-lg-6 col-md-12">
-									<h3 data-num="03">다솜 엔터테인먼트 웹 페이지</h3>
-									<ul>
-										<li class="desc"><strong>ViewPort</strong><span>반응형</span></li>
-										<li class="desc" style="display: flex; align-items: center;">
-											<strong>Palette</strong>
-											<span>
-												<ul class="palette">
-													<li data-color="#e8554e" style="background-color: #e8554e;"></li>
-													<li data-color="#03af88" style="background-color: #03af88;"></li>
-													<li data-color="#8d6fbc" style="background-color: #8d6fbc;"></li>
-												</ul>
-											</span>
-										</li>
-									</ul>
-									<div>
-										<p>다솜 엔터테인먼트의 웹 페이지입니다.</p>
-										<p>홈페이지 사용자의 대상 및 환경을 고려하여 스마트폰, 태블릿 등에서도 이용할 수 있도록 반응형 웹 방식으로 구현하였습니다.</p>
+								<section class="work_repeat row mb-5" slide>
+									<div class="work_img col-lg-6 col-md-12"><img src="image/dasom.png"></div>
+									<div class="work_tooltip col-lg-6 col-md-12">
+										<h3 data-num="03">다솜 엔터테인먼트 웹 페이지</h3>
+										<ul>
+											<li class="desc"><strong>ViewPort</strong><span>반응형</span></li>
+											<li class="desc" style="display: flex; align-items: center;">
+												<strong>Palette</strong>
+												<span>
+													<ul class="palette">
+														<li data-color="#e8554e" style="background-color: #e8554e;"></li>
+														<li data-color="#03af88" style="background-color: #03af88;"></li>
+														<li data-color="#8d6fbc" style="background-color: #8d6fbc;"></li>
+													</ul>
+												</span>
+											</li>
+										</ul>
+										<div>
+											<p>다솜 엔터테인먼트의 웹 페이지입니다.</p>
+											<p>홈페이지 사용자의 대상 및 환경을 고려하여 스마트폰, 태블릿 등에서도 이용할 수 있도록 반응형 웹 방식으로 구현하였습니다.</p>
+										</div>
+										<div class="button_wrap">
+											<div><a href="http://www.dearmystar.com/" target="_blank" class="button">Original Page</a></div>
+										</div>
 									</div>
-									<div class="button_wrap">
-										<div><a href="http://www.dearmystar.com/" target="_blank" class="button">Original Page</a></div>
-									</div>
-								</div>
-							</section>
+								</section>
 
-						</article>
+							</article>
+						</div>
 					</div>
 				</section>
-				<section class="timeline" id="timeline" ng-controller="timelineCtrl">
-					<div class="col-lg-12 timeline-start">
-						<div class="circle-start" timeline>start</div>
-					</div>
-					<div class="col-lg-12 timeline-repeat" ng-repeat="x in dataset">
-						<div class="col-lg-6 timeline-wrap" timeline>
-							<div class="timeline-content-wrap" slide>
-								<div class="timeline-title">{{x.date}}</div>
-								<div class="timeline-content">{{x.content}}</div>
-							</div>
+				<section id="timeline" ng-controller="timelineCtrl">
+					<div class="row timeline" >
+						<div class="col-lg-12 timeline-start">
+							<div class="circle-start" timeline>start</div>
 						</div>
-						<div class="col-lg-6 timeline-empty" timeline></div>
-					</div>
-					<div class="col-lg-12 timeline-end">
-						<div class="circle-end" timeline>end</div>
+						<div class="col-lg-12 timeline-repeat" ng-repeat="x in dataset">
+							<div class="col-lg-6 timeline-wrap" timeline>
+								<div class="timeline-content-wrap" slide>
+									<div class="timeline-title">{{x.date}}</div>
+									<div class="timeline-content">{{x.content}}</div>
+								</div>
+							</div>
+							<div class="col-lg-6 timeline-empty" timeline></div>
+						</div>
+						<div class="col-lg-12 timeline-end">
+							<div class="circle-end" timeline>end</div>
+						</div>
 					</div>
 				</section>
 			</main>
 		</div>
-		<footer class="footer">
+		<footer>
+			<div class="col-lg-12 center face">
+				<div class="myface"></div>
+				<div class="myinfo">
+					<p>임재성</p>
+					<p>Web Programmer(Full-Stack Management)</p>
+					<p>010-4017-7274</p>
+					<p>personalc@naver.com</p>
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>
