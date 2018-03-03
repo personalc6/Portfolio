@@ -75,7 +75,7 @@ html, body {
 	text-align: right;
 	z-index: 99;
 	transition: background-color .5s ease-out;
-	& a:link, & a:visited {
+	a:link, a:visited {
 		color: #fff;
 		text-decoration: none;
 	}
@@ -89,37 +89,109 @@ html, body {
 	background: url("../image/main_img4.jpg");
 	background-position: 50% 0;
 	background-repeat: no-repeat;
-	box-shadow: 0 1px 20px 5px rgba(0,0,0,.3);
-	//background-attachment: fixed;
 	.title {
 		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		width: 50rem;
 		height: 30rem;
 		top: 50%;
 		transform: translate(0, -50%);
 		background: rgba(0,0,0,.5);
 		margin: 0 auto;
-		&:before, &:after, & .title_text:before, & .title_text:after {
+		.title_line {
 			position: absolute;
-			content: "";
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			transition: width .5s, height .5s;
+			width: 90%;
+			height: 90%;
+			&:before, &:after {
+				position: absolute;
+				content: "";
+				width: 100%;
+				height: 100%;
+			}
+			&:before {
+				border-top: 1px solid #fff;
+				border-bottom: 1px solid #fff;
+				left: 50%;
+				width: 0;
+				transition: left .3s, width .3s;
+			}
+			&:after {
+				border-left: 1px solid #fff;
+				border-right: 1px solid #fff;
+				top: 50%;
+				height: 0;
+				transition: top .3s, height .3s;
+			}
+			&:hover:before {
+				left: 0;
+				width: 100%;
+			}
+			&:hover:after {
+				top: 0;
+				height: 100%;
+			}
 		}
-		&:before {border-top: 1px solid #fff; width: 0%;}
-		&:after {border-right: 1px solid #fff; height: 0%;}
-		& .title_text:before {border-bottom: 1px solid #fff; width: 0%; left: unset;}
-		& .title_text:after {border-left: 1px solid #fff; height: 0%; top: unset;}
-		& .title_text {
-			color: #fff;
-			font-size: 5rem;
+		.icon {
+			display: block;
 			text-align: center;
-			padding: 11.5rem 0;
+			.phone {
+				position: relative;
+				display: inline-block;
+				width: 3.2rem;
+				height: 3.2rem;
+				margin: 0 1rem;
+				.title_icon {
+					display: block;
+					width: 100%;
+					height: 100%;
+					background-color: #fff;
+					background-image: url("../image/phone.png");
+					background-size: cover;
+					@include mixin-border-radius(3.2rem);
+					box-shadow: 0 0 0 .5rem #fff;
+					transition: background-color .3s, box-shadow .3s;
+					&:hover, &:focus {
+						background-color: #ccc;
+						box-shadow: 0 0 0 .5rem #ccc;
+					}
+					&:before {
+						position: absolute;
+						content: attr(data-content);
+						left: 50%;
+						top: -4rem;
+						white-space: nowrap;
+						color: #fff;
+						background-color: rgba(0,0,0,.5);
+						padding: .6rem 1rem;
+						opacity: 0;
+						transform: translate(-50%,0);
+						transition: opacity .3s;
+						pointer-events: none;
+					}
+					&:hover:before {
+						opacity: 1;
+					}
+				}
+			}
+			.email {
+				@extend .phone;
+				.title_icon {
+					background-image: url("../image/email.png");
+				}
+			}
 		}
-		&.on:before, &.on2 .title_text:before {width: 100%;}
-		&.on1:after, &.on3 .title_text:after {height: 100%;}
+		.title_text {
+			text-align: center;
+			color: #fff;
+			font-size: 4rem;
+			p:nth-child(2) {
+				font-size: 2rem;
+				margin-bottom: 4rem;
+			}
+		}
 	}
 }
 
