@@ -45,6 +45,7 @@ ul {
 
 .header ul {
 	display: inline-block;
+	font-size: 1.2rem;
 	& li {
 		display: inline-block;
 		padding: 1.2rem 0;
@@ -688,6 +689,8 @@ html, body {
 	html, body {
 		font-size: 16px !important;
 	}
+	.header ul li {padding: .5rem 0;}
+	.header ul li a {padding-top: .5rem; padding-bottom: .5rem;}
 	.work_repeat {flex-direction: column;}
 	.work .work_wrap .work_content .work_repeat .work_tooltip {order: 0 !important;}
 	.timeline .timeline-repeat:nth-child(odd) .timeline-empty,

@@ -24,7 +24,8 @@ ul {
   margin-bottom: 5rem; }
 
 .header ul {
-  display: inline-block; }
+  display: inline-block;
+  font-size: 1.2rem; }
   .header ul li {
     display: inline-block;
     padding: 1.2rem 0; }
@@ -622,6 +623,13 @@ html, body {
 @media screen and (max-width: 1200px) {
   html, body {
     font-size: 16px !important; }
+
+  .header ul li {
+    padding: .5rem 0; }
+
+  .header ul li a {
+    padding-top: .5rem;
+    padding-bottom: .5rem; }
 
   .work_repeat {
     flex-direction: column; }
