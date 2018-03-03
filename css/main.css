@@ -489,9 +489,8 @@ html, body {
     color: #8cddeb;
     padding-bottom: 5rem; }
   .work .work_wrap {
-    display: table;
     width: 80%;
-    height: 100%;
+    height: auto;
     bottom: 0;
     margin: auto;
     padding-top: 15rem; }
@@ -499,11 +498,15 @@ html, body {
       position: relative;
       display: block;
       width: 100%;
+      height: auto;
       box-sizing: content-box; }
       .work .work_wrap .work_content .work_repeat {
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 100%;
+        height: auto;
         box-sizing: content-box;
         text-align: center;
         opacity: 0;
@@ -512,9 +515,16 @@ html, body {
           opacity: 1; }
         .work .work_wrap .work_content .work_repeat:nth-child(even) .work_tooltip {
           order: -1; }
-        .work .work_wrap .work_content .work_repeat .work_img img {
-          width: 100%; }
+        .work .work_wrap .work_content .work_repeat .work_img {
+          -webkit-box-flex: 1;
+          -ms-flex: 1;
+          flex-grow: 1; }
+          .work .work_wrap .work_content .work_repeat .work_img img {
+            width: 100%; }
         .work .work_wrap .work_content .work_repeat .work_tooltip {
+          -webkit-box-flex: 1;
+          -ms-flex: 1;
+          flex-grow: 1;
           text-align: left; }
           .work .work_wrap .work_content .work_repeat .work_tooltip h1 {
             font-size: 3rem;
@@ -687,24 +697,23 @@ html, body {
     padding-bottom: .5rem; }
 
   .work_repeat {
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
     flex-direction: column; }
 
   .work .work_wrap .work_content .work_repeat .work_tooltip {
-    order: 0 !important; }
+    order: 0 !important;
+    -ms-flex: none; }
+
+  .work .work_wrap .work_content .work_repeat .work_img {
+    -ms-flex: none; }
 
   .timeline .timeline-repeat:nth-child(odd) .timeline-empty,
   .timeline .timeline-repeat:nth-child(even) .timeline-wrap {
     border: none; }
 
-  .timeline {
-    position: relative; }
-    .timeline:before {
-      position: absolute;
-      content: "";
-      left: 50%;
-      top: 0;
-      height: 100%;
-      border-right: 1px solid #ffe079; } }
+  .timeline .timeline-start, .timeline .timeline-end {
+    display: none; } }
 @media screen and (max-width: 980px) {
   .about .about_wrap .about_text {
     font-size: 1.5rem; } }

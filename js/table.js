@@ -20,7 +20,7 @@ app.controller('worksCtrl', function($scope) {
 	{num:'02',title:'한국보건의료인국가시험원 근태관리시스템',viewport:'반응형',palette1:'#fb7878',palette2:'',palette3:'',
 	content1:'기존 관리하고 있던 한국보건의료인국가시험원의 메인 페이지를 리뉴얼 하였습니다. css를 최대한 활용하여 불필요한 이미지를 제거하고 가독성을 극대화하였습니다.',
 	content2:'공공기관 사이트로서 보다 많은 사용자 환경에 대응하기 위해 익스플로러 8까지의 호환성 지원, 웹 접근성 관리가 되어 있습니다.',
-	button_name1:'Sample Page', button_href1:"javascript:window.open('kuksiwon_attendance.html','','width=950,height=500,menubar=no,scrollbars=no,status=no')",
+	button_name1:'Sample Page', button_href1:"kuksiwon_attendance.html",
 	button_name2:'', button_href2:'',
 	img:'image/kuksiwon_attendance.png'},
 
