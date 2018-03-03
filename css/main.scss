@@ -1,4 +1,5 @@
 $yellow: #ffe079;
+$blue: #30b7e8;
 //@import url('//cdn.rawgit.com/young-ha/webfont-archive/master/css/PureunJeonnam.css');
 
 @font-face {
@@ -231,7 +232,7 @@ html, body {
 					position: absolute;
 					width: 0;
 					content: attr(highlight_ani);
-					color: #30b7e8;
+					color: $blue;
 					white-space: nowrap;
 					overflow: hidden;
 					transition: width 1s;
@@ -459,6 +460,11 @@ html, body {
 				width: 100%;
 				box-sizing: content-box;
 				text-align: center;
+				opacity: 0;
+				transition: opacity 1s;
+				&.slide {
+					opacity: 1;
+				}
 				&:nth-child(even) .work_tooltip {
 					order: -1;
 				}
@@ -491,7 +497,7 @@ html, body {
 	position: relative;
 	display: inline-block;
 	content: attr(data-num);
-	color: #30b7e8;
+	color: $blue;
 	margin-right: 20px;
 	font-size: 40px
 }
@@ -538,22 +544,161 @@ html, body {
 }
 
 .button {
-	color: #30b7e8 !important;
-	border: 2px solid #30b7e8;
+	color: $blue !important;
+	border: 2px solid $blue;
 	padding: 10px 15px;
 	font-weight: bold;
 	@include mixin-border-radius(3px);
 	transition: background-color .3s, color .3s;
 	&:hover {
 		color: #fff !important;
-		background-color: #30b7e8;
+		background-color: $blue;
+	}
+}
+
+.timeline {
+	.timeline-start {
+		display: flex;
+		justify-content: center;
+		margin-top: 5rem;
+		.circle-start {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			width: 8rem;
+			height: 8rem;
+			font-size: 2.3rem;
+			font-weight: bold;
+			background-color: #ccc;
+			@include mixin-border-radius(8rem);
+			transition: background-color .3s;
+			&.on {
+				background-color: $yellow;
+			}
+		}
+	}
+	.timeline-repeat {
+		display: flex;
+		.timeline-wrap {
+			flex-grow: 1;
+			padding: 4rem 6rem;
+			.timeline-content-wrap {
+				position: relative;
+				color: #fff;
+				width: 70%;
+				background-color: $blue;
+				padding: 2rem 3rem;
+				opacity: 0;
+				transition: opacity 1s;
+				@include mixin-border-radius(6px);
+				&.slide {
+					opacity: 1;
+				}
+				.timeline-title {
+					font-size: 2rem;
+					font-weight: bold;
+				}
+			}
+		}
+		&:nth-child(odd) .timeline-empty, &:nth-child(even) .timeline-wrap {
+			position: relative;
+			border-right: 1px solid #ccc;
+			transition: border-color .3s;
+			&.on {
+				border-color: $yellow;
+			}
+			&:before {
+				position: absolute;
+				content: "";
+				right: 0;
+				top: 50%;
+				width: 3rem;
+				height: 3rem;
+				transform: translate(50%,-50%);
+				background-color: #ccc;
+				@include mixin-border-radius(3rem);
+				transition: background-color .3s;
+			}
+			&.on:before {
+				background-color: $yellow;
+			}
+		}
+		&:nth-child(even) .timeline-wrap {
+			.timeline-content-wrap {
+				float: right;
+			}
+			.timeline-content-wrap:before {
+				position: absolute;
+				display: block;
+				content: "";
+				right: 0;
+				top: 50%;
+				border-top: .5rem solid transparent;
+				border-bottom: .5rem solid transparent;
+				border-left: .5rem solid $blue;
+				transform: translate(100%,-50%);
+				z-index: 9;
+				clear: both;
+			}
+		}
+		&:nth-child(odd) .timeline-wrap {
+			order: 1;
+			.timeline-content-wrap:before {
+				position: absolute;
+				display: block;
+				content: "";
+				left: 0;
+				top: 50%;
+				border-top: .5rem solid transparent;
+				border-bottom: .5rem solid transparent;
+				border-right: .5rem solid $blue;
+				transform: translate(-100%,-50%);
+				z-index: 9;
+			}
+		}
+	}
+	.timeline-end {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 5rem;
+		.circle-end {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			width: 5rem;
+			height: 5rem;
+			font-size: 1.8rem;
+			font-weight: bold;
+			background-color: #ccc;
+			@include mixin-border-radius(5rem);
+			transition: background-color .3s;
+			&.on {
+				background-color: $yellow;
+			}
+		}
 	}
 }
 
 @media screen and (max-width: 1200px) {
 	.work_repeat {flex-direction: column;}
 	.work .work_wrap .work_content .work_repeat .work_tooltip {order: 0 !important;}
+	.timeline .timeline-repeat:nth-child(odd) .timeline-empty,
+	.timeline .timeline-repeat:nth-child(even) .timeline-wrap {border: none;}
+	.timeline {
+		position: relative;
+		&:before {
+			position: absolute;
+			content: "";
+			left: 50%;
+			top: 0;
+			height: 100%;
+			border-right: 1px solid $yellow;
+		}
+	}
 }
+
 @media screen and (max-width: 980px) {
 	.about .about_wrap .about_text {font-size: 1.5rem;}
 }

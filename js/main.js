@@ -13,6 +13,22 @@ $(document).ready(function() {
 				$(this).addClass('on');
 		});
 
+		$('[timeline]').each(function() {
+			var objectBottom = $(this).offset().top+ $(this).outerHeight();
+			var windowBottom = $(window).scrollTop() + ($(window).height() * 0.95);
+
+			if(windowBottom > objectBottom)
+				$(this).addClass('on');
+		});
+
+		$('[slide]').each(function() {
+			var objectBottom = $(this).offset().top+ $(this).outerHeight();
+			var windowBottom = $(window).scrollTop() + ($(window).height());
+
+			if(windowBottom > objectBottom)
+				$(this).addClass('slide');
+		});
+
 	});
 
 	$('#nav_home').click(function() {

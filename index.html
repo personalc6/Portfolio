@@ -21,8 +21,8 @@
 		<script src="js/animation.js"></script>
 		<title>포트폴리오 | 임재성</title>
 	</head>
-	<body>
-		<div class="wrap home" ng-app="myApp">
+	<body ng-app="myApp">
+		<div class="wrap home">
 			<header class="header">
 				<nav>
 					<ul>
@@ -34,7 +34,7 @@
 				</nav>
 			</header>
 			<main class="wrap content">
-				<div class="main" id="home">
+				<section class="main" id="home">
 					<div class="title">
 						<div class="title_line"></div>
 						<div class="title_text">
@@ -46,8 +46,8 @@
 							<div class="email"><a class="title_icon" href="mailto:personalc@naver.com" data-content="personalc@naver.com"></a></div>
 						</section>
 					</div>
-				</div>
-				<div class="about" id="about">
+				</section>
+				<section class="about" id="about">
 					<div class="skills_popup"></div>
 					<div class="skills_table">
 						<span class="exit">x</span>
@@ -90,13 +90,13 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="work" id="work">
+				</section>
+				<section class="work" id="work">
 					<div class="work_wrap">
 						<div class="work_title">Work</div>
 						<article class="work_content">
 
-							<section class="work_repeat row mb-5">
+							<section class="work_repeat row mb-5" slide>
 								<div class="work_img col-lg-6 col-md-12"><img src="image/kuksiwon.png"></div>
 								<div class="work_tooltip col-lg-6 col-md-12">
 									<h3 data-num="01">한국보건의료인국가시험원 메인페이지</h3>
@@ -124,7 +124,7 @@
 								</div>
 							</section>
 
-							<section class="work_repeat row mb-5">
+							<section class="work_repeat row mb-5" slide>
 								<div class="work_img col-lg-6 col-md-12"><img src="image/kuksiwon_attendance.png"></div>
 								<div class="work_tooltip col-lg-6 col-md-12">
 									<h3 data-num="02">한국보건의료인국가시험원 근태관리 시스템</h3>
@@ -149,7 +149,7 @@
 								</div>
 							</section>
 
-							<section class="work_repeat row mb-5">
+							<section class="work_repeat row mb-5" slide>
 								<div class="work_img col-lg-6 col-md-12"><img src="image/dasom.png"></div>
 								<div class="work_tooltip col-lg-6 col-md-12">
 									<h3 data-num="03">다솜 엔터테인먼트 웹 페이지</h3>
@@ -176,9 +176,26 @@
 								</div>
 							</section>
 
-						</div>
+						</article>
 					</div>
-				</div>
+				</section>
+				<section class="timeline" id="timeline" ng-controller="timelineCtrl">
+					<div class="col-lg-12 timeline-start">
+						<div class="circle-start" timeline>start</div>
+					</div>
+					<div class="col-lg-12 timeline-repeat" ng-repeat="x in dataset">
+						<div class="col-lg-6 timeline-wrap" timeline>
+							<div class="timeline-content-wrap" slide>
+								<div class="timeline-title">{{x.date}}</div>
+								<div class="timeline-content">{{x.content}}</div>
+							</div>
+						</div>
+						<div class="col-lg-6 timeline-empty" timeline></div>
+					</div>
+					<div class="col-lg-12 timeline-end">
+						<div class="circle-end" timeline>end</div>
+					</div>
+				</section>
 			</main>
 		</div>
 		<footer class="footer">
