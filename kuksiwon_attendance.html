@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>임재성님의 근태정보</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="vendor/css/main_attendance.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <!-- Page Content -->
+    <div class="container-full" ng-app="myApp">
+      <div class="row">
+        <main role="main" class="col-lg-3 col-md-4 attend-left">
+          <article role="region" class="col-lg-12 attend-info">
+            <div class="mb-4 info-text">
+              <h1>임재성님의 근태정보</h1>
+              <hr>
+              <span>[공지] 퇴근 시간이 정확히 입력되어 있는지 확인하세요</span>
+            </div>
+            <div class="info-data">
+              <table>
+                <tbody>
+                  <tr>
+                    <th scope="row">출근<br>시간</th>
+                    <td>09:02</td>
+                    <td class="text-center"><a href="#" class="button disable">출근완료</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">퇴근<br>예정시간</th>
+                    <td colspan="2">18:02 (00:24 남음)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">퇴근<br>시간</th>
+                    <td class="red">퇴근 미체크</td>
+                    <td class="text-center"><a href="#" class="button">퇴근체크</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">서버<br>시간</th>
+                    <td colspan="2">17:38:28</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">상태값</th>
+                    <td colspan="2">정상</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </main>
+        <aside role="region" class="col-lg-9 col-md-8 attend-right">
+          <article role="region" class="col-lg-9 attend-data">
+            <div class="attend-title">
+              <span data-content="condition" class="show"><a href="#"><i class="icon-condition"></i>일별 근태현황</a></span>
+              <span data-content="information"><a href="#"><i class="icon-information"></i>금일 부서원 출퇴근정보</a></span>
+              <span data-content="education"><a href="#"><i class="icon-education"></i>교육이수현황</a></span>
+            </div>
+            <div class="attend-content">
+              <div id="condition" class="show">
+                <table ng-controller="conditionCtrl">
+                  <thead>
+                    <tr>
+                      <th>일자</th>
+                      <th>요일</th>
+                      <th>구분</th>
+                      <th>출근<br>시간</th>
+                      <th>퇴근<br>시간</th>
+                      <th>기타<br>근태내역</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="x in dataset">
+                      <td>{{x.date}}</td>
+                      <td>{{x.week}}</td>
+                      <td>{{x.division}}</td>
+                      <td>{{x.checkin}}</td>
+                      <td class="{{x.cls}}">{{x.checkout}}</td>
+                      <td>{{x.other}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="information">
+                <table ng-controller="informationCtrl">
+                  <thead>
+                    <tr>
+                      <th>일자</th>
+                      <th>요일</th>
+                      <th>직급명</th>
+                      <th>성명</th>
+                      <th>출근<br>시간</th>
+                      <th>퇴근<br>예정시간</th>
+                      <th>퇴근<br>시간</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="x in dataset">
+                      <td>{{x.date}}</td>
+                      <td>{{x.week}}</td>
+                      <td>{{x.rank}}</td>
+                      <td>{{x.name}}</td>
+                      <td>{{x.checkin}}</td>
+                      <td>{{x.willcheckout}}</td>
+                      <td>{{x.checkout}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="education">
+                <table class="mb-4">
+                  <thead>
+                    <tr>
+                      <th>이수<br>년도</th>
+                      <th>교육<br>구분</th>
+                      <th>세부<br>구분</th>
+                      <th>교육<br>과정</th>
+                      <th>이수<br>기준</th>
+                      <th>이수<br>시간</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="10">
+                        <select>
+                          <option value="2018">2018</option>
+                          <option value="2017">2017</option>
+                          <option value="2016">2016</option>
+                        </select>
+                      </td>
+                      <td rowspan="8">필수</td>
+                      <td>신규직원</td>
+                      <td>신규직원</td>
+                      <td></td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="6">법정교육</td>
+                      <td>성희롱</td>
+                      <td>1</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>성매매</td>
+                      <td>1</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>성폭력</td>
+                      <td>1</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>가정폭력</td>
+                      <td>1</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>정보보안</td>
+                      <td>1</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>윤리청렴</td>
+                      <td>1</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>부서필수</td>
+                      <td>부서필수</td>
+                      <td>24</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td colspan="3">기타</td>
+                      <td></td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td colspan="3">선택</td>
+                      <td>32</td>
+                      <td>8</td>
+                    </tr>
+                    <tr>
+                      <td colspan="4">계</td>
+                      <td>80</td>
+                      <td>14</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="row">
+                  <span class="col-lg-8 red">※ 중도입사자, 승진자(4급→3급), 휴직자 등은 이수기준이 다를 수 있습니다.</span>
+                  <div class="col-lg-4 text-md-left text-right"><a class="button" href="#">교육이수현황 상세 보기</a></div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </aside>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/js/jquery-1.11.1.min.js"></script>
+    <script src="vendor/js/bootstrap.min.js"></script>
+    <script src="vendor/js/main_attendance.js"></script>
+    <script src="vendor/js/angular.min.js"></script>
+    <script src="vendor/js/dataset.js"></script>
+  </body>
+
+</html>

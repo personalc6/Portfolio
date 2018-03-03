@@ -1,0 +1,195 @@
+html, body {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+a {
+  color: #000; }
+  a:hover, a:focus {
+    color: #f56a6a;
+    text-decoration: none; }
+
+.container-full {
+  margin: 0 auto;
+  width: 97.5%;
+  height: 100%; }
+  .container-full .row {
+    height: 100%; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.red {
+  color: #f56a6a; }
+
+.button {
+  color: #f56a6a;
+  padding: .2rem .5rem;
+  border: 2px solid #f56a6a;
+  background-color: #fff;
+  transition: color .3s, background-color .3s;
+  white-space: nowrap;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px; }
+  .button:hover, .button:focus {
+    color: #fff;
+    cursor: pointer;
+    background-color: #f56a6a; }
+  .button.disable {
+    color: #fff;
+    border-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5); }
+
+.attend-left {
+  box-shadow: 1px 0 5px 1px rgba(0, 0, 0, 0.1); }
+  .attend-left .attend-info {
+    height: calc(100% - 30px); }
+    .attend-left .attend-info .info-text {
+      text-align: right;
+      margin-top: 1rem; }
+      .attend-left .attend-info .info-text h1 {
+        font-size: 1.5rem; }
+      .attend-left .attend-info .info-text hr {
+        border: 2px solid #f56a6a;
+        margin-bottom: 0; }
+      .attend-left .attend-info .info-text span {
+        font-size: .9rem;
+        font-weight: bold;
+        letter-spacing: -1.2px; }
+    .attend-left .attend-info .info-data table {
+      width: 100%;
+      font-size: .8rem;
+      transition: font-size .3s; }
+      .attend-left .attend-info .info-data table tr {
+        border-top: 1px solid #f56a6a;
+        border-bottom: 1px solid #f56a6a; }
+        .attend-left .attend-info .info-data table tr td {
+          padding: .5rem; }
+
+.attend-right {
+  display: flex;
+  align-items: center; }
+  .attend-right .attend-data {
+    width: 90%;
+    height: 90%;
+    margin: auto; }
+    .attend-right .attend-data .attend-title {
+      font-size: 0; }
+      .attend-right .attend-data .attend-title .icon-condition, .attend-right .attend-data .attend-title .icon-information, .attend-right .attend-data .attend-title .icon-education {
+        position: absolute;
+        display: none;
+        left: -30px;
+        top: 0;
+        background-image: url("../../image/condition.png");
+        background-size: cover;
+        width: 20px;
+        height: 20px; }
+      .attend-right .attend-data .attend-title .icon-information {
+        background-image: url("../../image/information.png"); }
+      .attend-right .attend-data .attend-title .icon-education {
+        background-image: url("../../image/education.png"); }
+      .attend-right .attend-data .attend-title span {
+        display: inline-block;
+        border-left: 2px solid #f56a6a;
+        border-top: 2px solid #f56a6a;
+        padding: .2rem .5rem;
+        font-size: .9rem;
+        transition: background-color .3s, border-color .3s; }
+        .attend-right .attend-data .attend-title span a {
+          position: relative;
+          color: #f56a6a; }
+        .attend-right .attend-data .attend-title span:nth-last-child(1) {
+          border-right: 2px solid #f56a6a; }
+        .attend-right .attend-data .attend-title span:hover, .attend-right .attend-data .attend-title span:focus {
+          background-color: #F58583;
+          border-color: #F58583;
+          cursor: pointer; }
+          .attend-right .attend-data .attend-title span:hover a, .attend-right .attend-data .attend-title span:focus a {
+            color: #fff; }
+        .attend-right .attend-data .attend-title span.show {
+          background-color: #f56a6a;
+          border-color: #f56a6a;
+          cursor: pointer; }
+          .attend-right .attend-data .attend-title span.show a {
+            color: #fff; }
+    .attend-right .attend-data .attend-content {
+      width: 100%;
+      height: calc(100% - 33px);
+      border-top: 2px solid #f56a6a;
+      border-bottom: 1px solid #f56a6a;
+      overflow: hidden;
+      overflow-y: auto; }
+      .attend-right .attend-data .attend-content > div {
+        display: none;
+        font-size: .9rem; }
+        .attend-right .attend-data .attend-content > div.show {
+          display: block;
+          width: 100%; }
+        .attend-right .attend-data .attend-content > div table {
+          font-size: .9rem;
+          width: 100%;
+          text-align: center; }
+          .attend-right .attend-data .attend-content > div table tr th {
+            border-bottom: 2px solid #f56a6a;
+            line-height: 1rem; }
+          .attend-right .attend-data .attend-content > div table tr td {
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+            height: 2.5rem; }
+
+@media (max-width: 992px) {
+  .attend-info .info-text span {
+    font-size: .7rem !important; }
+
+  .info-data table {
+    font-size: .7rem !important; }
+
+  .attend-right .attend-data .attend-content > div table {
+    font-size: .7rem !important; }
+
+  .attend-right .attend-data {
+    width: 100%;
+    height: 100%; }
+
+  .text-md-left {
+    text-align: left !important; } }
+@media (max-width: 768px) {
+  .attend-info .info-text span {
+    font-size: .9rem !important; }
+
+  .info-data table {
+    font-size: .9rem !important; }
+
+  .attend-right .attend-data .attend-content > div table {
+    font-size: .9rem !important;
+    letter-spacing: -.5px; }
+
+  .attend-right .attend-data .attend-content {
+    border-top: none; }
+
+  .attend-right .attend-data .attend-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+
+  .attend-right .attend-data .attend-title span {
+    border: 2px solid #f56a6a; }
+
+  .attend-right .attend-data .attend-title span:nth-child(2) {
+    border-top: none;
+    border-bottom: none; }
+
+  .attend-left {
+    margin-bottom: 1.5rem; }
+
+  .attend-right .attend-data .attend-title .icon-condition, .attend-right .attend-data .attend-title .icon-information, .attend-right .attend-data .attend-title .icon-education,
+  .attend-right .attend-data .attend-title .icon-information,
+  .attend-right .attend-data .attend-title .icon-education {
+    display: block; } }
+
+/*# sourceMappingURL=main_attendance.css.map */

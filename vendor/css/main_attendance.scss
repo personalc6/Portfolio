@@ -1,0 +1,218 @@
+$main-color: #f56a6a;
+
+@mixin mixin-border-radius($params) {
+	-webkit-border-radius: $params;
+	   -moz-border-radius: $params;
+	    -ms-border-radius: $params;
+	     -o-border-radius: $params;
+	        border-radius: $params;
+}
+
+html, body {
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+a {
+	color: #000;
+	&:hover, &:focus {
+		color: $main-color;
+		text-decoration: none;
+	}
+}
+
+.container-full {
+	margin: 0 auto;
+	width: 97.5%;
+	height: 100%;
+	.row {
+		height: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.red {
+	color: $main-color;
+}
+
+.button {
+	color: $main-color;
+	padding: .2rem .5rem;
+	border: 2px solid $main-color;
+	background-color: #fff;
+	transition: color .3s, background-color .3s;
+	white-space: nowrap;
+	@include mixin-border-radius(4px);
+	&:hover, &:focus {
+		color: #fff;
+		cursor: pointer;
+		background-color: $main-color;
+	}
+	&.disable {
+		color: #fff;
+		border-color: rgba(0,0,0,.1);
+		background-color: rgba(0,0,0,.5);
+	}
+}
+
+.attend-left {
+	box-shadow: 1px 0 5px 1px rgba(0,0,0,.1);
+	.attend-info {
+		height: calc(100% - 30px);
+		.info-text {
+			text-align: right;
+			margin-top: 1rem;
+			h1 {
+				font-size: 1.5rem;
+			}
+			hr {
+				border: 2px solid $main-color;
+				margin-bottom: 0;
+			}
+			span {
+				font-size: .9rem;
+				font-weight: bold;
+				letter-spacing: -1.2px;
+			}
+		}
+
+		.info-data {
+			table {
+				width: 100%;
+				font-size: .8rem;
+				transition: font-size .3s;
+				tr {
+					border-top: 1px solid $main-color;
+					border-bottom: 1px solid $main-color;
+					td {
+						padding: .5rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+.attend-right {
+	display: flex;
+	align-items: center;
+	.attend-data {
+		width: 90%;
+		height: 90%;
+		margin: auto;
+		.attend-title {
+			font-size: 0;
+			.icon-condition {
+				position: absolute;
+				display: none;
+				left: -30px;
+				top: 0;
+				background-image: url("../../image/condition.png");
+				background-size: cover;
+				width: 20px;
+				height: 20px;
+			}
+			.icon-information {
+				@extend .icon-condition;
+				background-image: url("../../image/information.png");
+			}
+			.icon-education {
+				@extend .icon-condition;
+				background-image: url("../../image/education.png");
+			}
+			span {
+				display: inline-block;
+				border-left: 2px solid $main-color;
+				border-top: 2px solid $main-color;
+				padding: .2rem .5rem;
+				font-size: .9rem;
+				transition: background-color .3s, border-color .3s;
+				& a {
+					position: relative;
+					color: $main-color;
+				}
+				&:nth-last-child(1) {
+					border-right: 2px solid $main-color;
+				}
+				&:hover, &:focus {
+					background-color: #F58583;
+					border-color: #F58583;
+					cursor: pointer;
+					& a {
+						color: #fff;
+					}
+				}
+				&.show {
+					background-color: $main-color;
+					border-color: $main-color;
+					cursor: pointer;
+					& a {
+						color: #fff;
+					}
+				}
+			}
+		}
+		.attend-content {
+			width: 100%;
+			height: calc(100% - 33px);
+			border-top: 2px solid $main-color;
+			border-bottom: 1px solid $main-color;
+			overflow: hidden;
+			overflow-y: auto;
+			>div {
+				display: none;
+				font-size: .9rem;
+				&.show {
+					display: block;
+					width: 100%;
+				}
+				table {
+					font-size: .9rem;
+					width: 100%;
+					text-align: center;
+					tr {
+						th {
+							border-bottom: 2px solid $main-color;
+							line-height: 1rem;
+						}
+						td {
+							border-bottom: 1px dashed rgba(0,0,0,.2);
+							height:2.5rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.attend-info .info-text span {font-size: .7rem !important;}
+	.info-data table {font-size: .7rem !important;}
+	.attend-right .attend-data .attend-content>div table {font-size: .7rem !important;}
+	.attend-right .attend-data {width: 100%; height: 100%;}
+	.text-md-left {text-align: left !important;}
+}
+@media (max-width: 768px) {
+	.attend-info .info-text span {font-size: .9rem !important;}
+	.info-data table {font-size: .9rem !important;}
+	.attend-right .attend-data .attend-content>div table {font-size: .9rem !important; letter-spacing: -.5px;}
+	.attend-right .attend-data .attend-content {border-top: none;}
+	.attend-right .attend-data .attend-title {display: flex; flex-direction: column; text-align: center;}
+	.attend-right .attend-data .attend-title span {border: 2px solid $main-color;}
+	.attend-right .attend-data .attend-title span:nth-child(2) {border-top: none; border-bottom: none;}
+	.attend-left {margin-bottom: 1.5rem;}
+	.attend-right .attend-data .attend-title .icon-condition,
+	.attend-right .attend-data .attend-title .icon-information,
+	.attend-right .attend-data .attend-title .icon-education {
+		display: block;
+	}
+}

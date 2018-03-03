@@ -1,0 +1,45 @@
+$(document).ready(function() {
+	$(window).scroll(function() {
+		if($(document).scrollTop() >= $(window).height())
+			$('.header').css('background-color','rgba(0,0,0,1)');	//scrollTop > headerTop
+		else 
+			$('.header').css('background-color','rgba(0,0,0,.5)');	//scrollTop < headerTop
+
+		$('[highlight_ani]').each(function() {
+			var objectBottom = $(this).offset().top+ $(this).outerHeight();
+			var windowBottom = $(window).scrollTop() + ($(window).height() * 0.6);
+
+			if(windowBottom > objectBottom)
+				$(this).addClass('on');
+		});
+
+	});
+
+	$('#nav_home').click(function() {
+		var nav_top = $('#home').offset().top;
+		$('html, body').animate({scrollTop: nav_top}, 400);
+		return false;
+	});
+
+	$('#nav_about').click(function() {
+		var nav_top = $('#about').offset().top;
+		$('html, body').animate({scrollTop: nav_top}, 400);
+		return false;
+	});
+
+	$('a.skills, #nav_skills').click(function() {
+		$('.skills_popup').addClass('on');
+		TweenLite.to($('.skills_popup, .skills_table'),.5,{opacity:1});
+	});
+
+	$('#nav_work').click(function() {
+		var nav_top = $('#work').offset().top;
+		$('html, body').animate({scrollTop: nav_top}, 400);
+		return false;
+	});
+
+	$('.skills_popup, .skills_table .exit').click(function() {
+		TweenLite.to($('.skills_popup, .skills_table'),.5,{opacity:0, onComplete:removeFunction});
+		function removeFunction() {$('.skills_popup').removeClass('on');}
+	});
+});
