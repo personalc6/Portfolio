@@ -168,8 +168,8 @@ a {
 .callcenter {
   text-align: center; }
   .callcenter img {
-    width: auto;
-    height: 177px; }
+    width: 100%;
+    height: auto; }
 
 .flex-grow > div {
   flex-grow: 1; }
