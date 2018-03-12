@@ -103,19 +103,21 @@ a {
 .top-menu-article {
 	.top-menu-wrap {
 		.top-menu {
-			li > a {
-				@include mixin-flex();
-				width: 6.75rem;
-				height: 5.625rem;
-				align-items: flex-end;
-				justify-content: center;
-				background-color: $green;
-				color: #fff;
-				padding: .5rem .5rem;
-				font-size: .9rem;
-				transition: background-color .2s;
-				&:hover {
-					background-color: $mid-green;
+			li {
+				display: inline;
+				a {
+					@include mixin-flex();
+					width: 100%;
+					align-items: flex-end;
+					justify-content: center;
+					background-color: $green;
+					color: #fff;
+					padding: .5rem .5rem;
+					font-size: .9rem;
+					transition: background-color .2s;
+					&:hover {
+						background-color: $mid-green;
+					}
 				}
 			}
 		}
@@ -255,4 +257,10 @@ footer {
 				margin: 0;
 		}
 	}
+}
+
+@media (min-width: 992px) {
+	.top-menu-article .top-menu-wrap .top-menu { display: flex; justify-content: space-around; }
+	.top-menu-article .top-menu-wrap .top-menu > li { display: inline-block; }
+	.top-menu-article .top-menu-wrap .top-menu > li > a { width: 6.75rem; height: 5.625rem; }
 }
