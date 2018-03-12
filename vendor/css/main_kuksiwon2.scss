@@ -119,6 +119,15 @@ a {
 
 /* Private */
 
+.carousel-indicators {
+	.active {
+		background-color: #000;
+	}
+	li {
+		background-color: rgba(0,0,0,.3);
+	}
+}
+
 .slide-wrap {
 	background-color: #EBEBEB;
 }
@@ -140,6 +149,10 @@ a {
 					transition: background-color .2s;
 					&:hover {
 						background-color: $mid-green;
+					}
+					div > img {
+						display: block;
+						margin: auto;
 					}
 				}
 			}
@@ -227,7 +240,7 @@ a {
 
 .thumb {
 	img {
-		width: 9.375rem;
+		width: 5.375rem;
 		height: auto;
 	}
 }
@@ -244,10 +257,24 @@ a {
 }
 
 .callcenter {
-	text-align: center;
-	img {
-		width: 100%;
-		height: auto;
+	text-align: left;
+	padding: 0 2rem;
+	color: #000;
+	p {
+		margin: 0;
+		&:nth-child(3) { position: relative; font-size: 2rem; margin-bottom: .7rem; font-weight: bold; }
+		&:nth-child(3):before {
+			position: absolute;
+			content: " ";
+			left: 170px;
+			top: 0;
+			width: 49px;
+			height: 51px;
+			transform: translate(0,-80%);
+			background-image: url('../../image/kuksiwon2/icon_phone.png');
+		}
+		&:nth-child(5) { color: #E16B3D; margin-bottom: .7rem; }
+		&:nth-child(6) { font-size: .9rem; }
 	}
 }
 

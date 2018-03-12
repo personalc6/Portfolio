@@ -115,18 +115,18 @@ a {
 				display: none;
 				left: -30px;
 				top: 0;
-				background-image: url("../../image/condition.png");
+				background-image: url("../../image/kuksiwon_attendance/condition.png");
 				background-size: cover;
 				width: 20px;
 				height: 20px;
 			}
 			.icon-information {
 				@extend .icon-condition;
-				background-image: url("../../image/information.png");
+				background-image: url("../../image/kuksiwon_attendance/information.png");
 			}
 			.icon-education {
 				@extend .icon-condition;
-				background-image: url("../../image/education.png");
+				background-image: url("../../image/kuksiwon_attendance/education.png");
 			}
 			span {
 				display: inline-block;
