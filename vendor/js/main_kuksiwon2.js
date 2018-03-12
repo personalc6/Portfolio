@@ -31,3 +31,7 @@ $('.notice .content-title>ul>li').each(function(index) {
 		});
 	});
 });
+
+$('.dropdown-toggle').click(function() {
+	$('.dropdown-menu').toggleClass('show');
+});
