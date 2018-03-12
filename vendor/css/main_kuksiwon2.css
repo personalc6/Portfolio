@@ -97,8 +97,8 @@ a {
 .nav li {
   position: relative; }
   .nav li .dropdown-menu {
-    left: unset;
-    right: 0;
+    left: 100%;
+    transform: translate(-100%, 0);
     width: 400px;
     word-break: keep-all; }
     .nav li .dropdown-menu ul {
