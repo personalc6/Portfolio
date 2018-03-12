@@ -93,10 +93,6 @@ a {
 .my-45 {
   margin-top: 2.813rem; }
 
-.px-55 {
-  padding-left: 3.438rem;
-  padding-right: 3.438rem; }
-
 /* Private */
 .carousel-indicators .active {
   background-color: #000; }
@@ -141,7 +137,8 @@ a {
     background-color: #5cbe15; }
 
 .dday .content-wrap, .notice .content-wrap {
-  padding: 3.438rem 3.438rem 2.438rem 3.438rem; }
+  padding-top: 3.438rem;
+  padding-bottom: 2.438rem; }
 
 .content-wrap .content-title {
   border-bottom: 2px solid #0B1827; }
@@ -290,7 +287,11 @@ footer .container p {
     background-color: #449808 !important; }
 
   .top-menu-article .top-menu-wrap .top-menu > li > a > div > img {
-    display: block; } }
+    display: block; }
+
+  .px-55 {
+    padding-left: 3.438rem;
+    padding-right: 3.438rem; } }
 @media (min-width: 1200px) {
   .callcenter p:nth-child(3) {
     font-size: 2.5rem; }

@@ -126,7 +126,6 @@ a {
 
 .mb-45, .my-45 { margin-bottom: 2.813rem; }
 .my-45 { margin-top: 2.813rem; }
-.px-55 { padding-left: 3.438rem; padding-right: 3.438rem; }
 
 /* Private */
 
@@ -176,7 +175,7 @@ a {
 	}
 }
 
-.dday .content-wrap, .notice .content-wrap { padding: 3.438rem 3.438rem 2.438rem 3.438rem; }
+.dday .content-wrap, .notice .content-wrap { padding-top: 3.438rem; padding-bottom: 2.438rem; }
 
 .content-wrap {
 	.content-title {
@@ -337,6 +336,7 @@ footer {
 	.top-menu-article .top-menu-wrap .top-menu > li > a { width: 7.375rem; height: 7.438rem; align-items: flex-end; padding-bottom: 1.688rem; background-color: $green !important; }
 	.top-menu-article .top-menu-wrap .top-menu > li > a:hover { background-color: $mid-green !important; }
 	.top-menu-article .top-menu-wrap .top-menu > li > a > div > img { display: block; }
+	.px-55 { padding-left: 3.438rem; padding-right: 3.438rem; }
 }
 
 @media (min-width: 1200px) {
