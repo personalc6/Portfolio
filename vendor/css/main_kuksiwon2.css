@@ -1,4 +1,22 @@
+@font-face {
+  font-family: 'GyeongGi';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../font/GyeongGiLight.woff") format("woff"); }
+@font-face {
+  font-family: 'GyeongGi';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../font/GyeongGiMedium.woff") format("woff"); }
+@font-face {
+  font-family: 'GyeongGi';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../../font/GyeongGiBold.woff") format("woff"); }
 /* Public */
+* {
+  font-family: 'GyeongGi','sans-serif'; }
+
 body {
   padding-top: 54px; }
 
