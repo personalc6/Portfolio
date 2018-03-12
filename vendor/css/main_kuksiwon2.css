@@ -17,15 +17,14 @@
 * {
   font-family: 'GyeongGi','sans-serif'; }
 
-body {
-  padding-top: 54px; }
-
 ul {
-  list-style-type: none; }
+  list-style-type: none;
+  margin: 0; }
 
 h1 {
   font-size: 1rem;
-  margin: 0; }
+  text-align: center;
+  margin: 1.313rem 0 2.813rem 0; }
 
 h2 {
   font-size: 1.2rem;
@@ -48,7 +47,7 @@ a {
   font-weight: bold; }
 
 .content-wrap {
-  box-shadow: 0rem 0.3rem 1rem 0 rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.1); }
 
 [data-dday] {
   position: relative; }
@@ -78,6 +77,7 @@ a {
   background-color: #5cbe15;
   color: #fff;
   padding: .4rem 1rem;
+  box-shadow: 0 0.2rem 0.7rem 0.1rem rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -87,11 +87,31 @@ a {
   .button a:hover {
     background-color: #449808; }
 
+.mb-45, .my-45 {
+  margin-bottom: 2.813rem; }
+
+.my-45 {
+  margin-top: 2.813rem; }
+
+.px-55 {
+  padding-left: 3.438rem;
+  padding-right: 3.438rem; }
+
 /* Private */
 .carousel-indicators .active {
   background-color: #000; }
 .carousel-indicators li {
   background-color: rgba(0, 0, 0, 0.3); }
+
+.carousel-control-next-icon {
+  position: absolute;
+  right: .938rem;
+  top: 50%; }
+
+.carousel-control-prev-icon {
+  position: absolute;
+  left: .938rem;
+  top: 50%; }
 
 .slide-wrap {
   background-color: #EBEBEB; }
@@ -107,14 +127,20 @@ a {
     justify-content: center;
     background-color: #5cbe15;
     color: #fff;
-    padding: .5rem .5rem;
+    padding-bottom: 1.688rem;
     font-size: .9rem;
+    font-weight: bold;
     transition: background-color .2s; }
     .top-menu-article .top-menu-wrap .top-menu li a:hover {
       background-color: #449808; }
-    .top-menu-article .top-menu-wrap .top-menu li a div > img {
-      display: block;
-      margin: auto; }
+    .top-menu-article .top-menu-wrap .top-menu li a div {
+      text-align: center; }
+      .top-menu-article .top-menu-wrap .top-menu li a div img {
+        display: block;
+        margin: auto; }
+
+.dday .content-wrap, .notice .content-wrap {
+  padding: 3.438rem 3.438rem 2.438rem 3.438rem; }
 
 .content-wrap .content-title {
   border-bottom: 2px solid #0B1827; }
@@ -152,12 +178,19 @@ a {
   display: none; }
   .content-wrap .list-title.active {
     display: block; }
-  .content-wrap .list-title ul > li > a > ul {
-    border-bottom: 1px solid #ccc; }
-    .content-wrap .list-title ul > li > a > ul li:nth-child(2) {
-      font-size: .8rem;
-      font-weight: 600;
-      color: #3E5161; }
+  .content-wrap .list-title > ul {
+    padding-top: 1.375rem; }
+    .content-wrap .list-title > ul > li > a > ul {
+      border-bottom: 1px solid #ccc; }
+      .content-wrap .list-title > ul > li > a > ul li {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: .625rem; }
+      .content-wrap .list-title > ul > li > a > ul li:nth-child(2) {
+        font-size: .8rem;
+        font-weight: 600;
+        color: #3E5161; }
   .content-wrap .list-title ul > li:nth-last-child(1) > a > ul {
     border-bottom: none; }
 .content-wrap .more {
@@ -167,19 +200,15 @@ a {
   width: 1.563rem;
   height: 1.563rem;
   font-size: 1.3rem;
-  line-height: 1.3rem;
+  line-height: 1.5rem;
   font-weight: bold;
   text-align: center;
-  border: 2px solid #000;
+  color: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(0, 0, 0, 0.7);
   transition: border-color .2s, color .2s; }
   .content-wrap .more:hover {
+    color: #5cbe15;
     border-color: #5cbe15; }
-
-.notice .list-title > ul > li > a > ul > li {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: .625rem; }
 
 .thumb img {
   width: 5.375rem;
@@ -194,19 +223,18 @@ a {
 
 .callcenter {
   text-align: left;
-  padding: 0 2rem;
   color: #000; }
   .callcenter p {
     margin: 0; }
     .callcenter p:nth-child(3) {
       position: relative;
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: .7rem;
       font-weight: bold; }
     .callcenter p:nth-child(3):before {
       position: absolute;
       content: " ";
-      left: 170px;
+      left: 210px;
       top: 0;
       width: 49px;
       height: 51px;
@@ -250,7 +278,7 @@ footer .container p {
     display: inline-block; }
 
   .top-menu-article .top-menu-wrap .top-menu > li > a {
-    width: 6.75rem;
-    height: 5.625rem; } }
+    width: 7.375rem;
+    height: 7.438rem; } }
 
 /*# sourceMappingURL=main_kuksiwon2.css.map */
