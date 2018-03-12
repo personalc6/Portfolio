@@ -14,7 +14,8 @@ app.controller('worksCtrl', function($scope) {
 	content1:'기존 관리하고 있던 한국보건의료인국가시험원의 메인 페이지를 리뉴얼 하였습니다. bootstrap 3을 사용하고, css를 최대한 활용하여 불필요한 이미지를 제거하고 가독성을 극대화하였습니다.',
 	content2:'리뉴얼 페이지에는 공공기관 사이트로서 보다 많은 사용자 환경에 대응하기 위해 익스플로러 8까지의 호환성 지원, 웹 접근성, 반응형 웹의 관리가 되어 있습니다.',
 	button_name1:'Original Page', button_href1:'http://www.kuksiwon.or.kr/Examination/Default.aspx',
-	button_name2:'Renewal Page', button_href2:'kuksiwon.html',
+	button_name2:'First Renewal Page', button_href2:'kuksiwon.html',
+	button_name3:'Second Renewal Page', button_href3:'kuksiwon2.html',
 	img:'image/kuksiwon.png'},
 
 	{num:'02',title:'한국보건의료인국가시험원 근태관리시스템',viewport:'반응형',palette1:'#fb7878',palette2:'',palette3:'',
