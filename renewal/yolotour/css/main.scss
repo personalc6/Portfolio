@@ -5,20 +5,28 @@ $orange: #ff6c00;
 @font-face {
     font-family: 'SeoulNamsan';
     font-weight: 100;
-    src: url('../font/SeoulNamsanJungM.woff2') format('woff2'),
-    	 url('../font/SeoulNamsanJungM.woff') format('woff');
+    src: url('../font/seoulnamsanjungm.eot'),
+    	 url('../font/seoulnamsanjungm.eot?#iefix') format('embedded-opentype'),
+    	 url('../font/seoulnamsanjungm.woff2') format('woff2'),
+    	 url('../font/seoulnamsanjungm.woff') format('woff');
 }
 @font-face {
     font-family: 'SeoulNamsan';
     font-weight: normal;
-    src: url('../font/SeoulNamsanJungB.woff2') format('woff2'),
-    	 url('../font/SeoulNamsanJungB.woff') format('woff');
+    src: url('../font/seoulnamsanjungb.eot'),
+    	 url('../font/seoulnamsanjungb.eot?#iefix') format('embedded-opentype'),
+    	 url('../font/seoulnamsanjungb.woff2') format('woff2'),
+    	 url('../font/seoulnamsanjungb.woff') format('woff'),
+    	 url('../font/seoulnamsanjungb.ttf') format('truetype');
 }
 @font-face {
     font-family: 'SeoulNamsan';
     font-weight: 900;
-    src: url('../font/SeoulNamsanJungEB.woff2') format('woff2'),
-    	 url('../font/SeoulNamsanJungEB.woff') format('woff');
+    src: url('../font/seoulnamsanjungeb.eot'),
+    	 url('../font/seoulnamsanjungeb.eot?#iefix') format('embedded-opentype'),
+    	 url('../font/seoulnamsanjungeb.woff2') format('woff2'),
+    	 url('../font/seoulnamsanjungeb.woff') format('woff'),
+    	 url('../font/seoulnamsanjungeb.ttf') format('truetype');
 }
 
 @mixin border-radius($params) {
