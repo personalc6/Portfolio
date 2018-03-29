@@ -131,6 +131,7 @@ nav {
         text-decoration: none; }
 
 .top .main-top {
+  min-width: 1153px;
   height: 51.875rem;
   background-image: url("../image/main.png");
   background-size: cover;
@@ -186,6 +187,8 @@ nav {
               height: 1.438rem; }
 
 .best {
+  width: 100%;
+  min-width: 1153px;
   height: 77.688rem;
   background-color: #f1f3f7; }
   .best h2 {
@@ -281,6 +284,8 @@ nav {
         margin-left: 0; }
 
 .event {
+  width: 100%;
+  min-width: 1153px;
   height: 65rem;
   background-color: #e7ebf1;
   padding-top: 6px; }
@@ -475,6 +480,7 @@ nav {
 
 .footer {
   width: 100%;
+  min-width: 1153px;
   height: 195px;
   padding-top: 42px;
   background-color: #00a0e9; }
