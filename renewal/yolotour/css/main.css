@@ -305,6 +305,7 @@ nav {
       .event .event-left .timeattack .time {
         color: #ff6c00; }
   .event .review-wrap {
+    position: relative;
     width: 100%;
     padding: 50px 66px;
     background-color: #fff;
@@ -317,6 +318,21 @@ nav {
       display: inline-block;
       height: auto;
       margin-right: 8px; }
+    .event .review-wrap .review-more {
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      width: 30px;
+      height: 30px;
+      color: #fff;
+      font-size: 30px;
+      line-height: 1.1;
+      text-align: center;
+      background-color: #00a0e9;
+      transition: background-color .2s; }
+      .event .review-wrap .review-more:hover {
+        cursor: pointer;
+        background-color: #0083bf; }
     .event .review-wrap .content-wrap .content {
       display: inline-block;
       width: 310px;

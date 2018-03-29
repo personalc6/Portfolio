@@ -348,6 +348,7 @@ nav {
 		}
 	}
 	.review-wrap {
+		position: relative;
 		width: 100%;
 		padding: 50px 66px;
 		background-color: #fff;
@@ -358,6 +359,23 @@ nav {
 			display: inline-block;
 			height: auto;
 			margin-right: 8px;
+		}
+		.review-more {
+			position: absolute;
+			right: 8px;
+			bottom: 8px;
+			width: 30px;
+			height: 30px;
+			color: #fff;
+			font-size: 30px;
+			line-height: 1.1;
+			text-align: center;
+			background-color: $sky;
+			transition: background-color .2s;
+			&:hover {
+				cursor: pointer;
+				background-color: $darksky;
+			}
 		}
 		.content-wrap {
 			.content {
