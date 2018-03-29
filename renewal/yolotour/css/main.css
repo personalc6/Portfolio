@@ -67,11 +67,15 @@ a:hover {
   margin: 0; }
 
 .row {
-  width: 68.75rem;
+  width: 69.75rem;
+  margin: 0 auto; }
+
+.widerow {
+  width: 73.3rem;
   margin: 0 auto; }
 
 a.button {
-  padding: .781rem 3.665rem;
+  padding: .813rem 2.5rem;
   color: #fff;
   background-color: #00a0e9;
   font-weight: bold;

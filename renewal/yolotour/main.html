@@ -4,10 +4,14 @@
   <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
+	<meta property="og:title" content="YOLOTOUR">
+	<meta property="og:url" content="https://personalc6.github.io/Portfolio/renewal/yolotour/main.html">
+	<meta property="og:image" content="./image/main.png">
+	<meta property="og:description" content="바람을 타고 산의 눈부신 풍경을 만나다">
+	<meta name="description" content="바람을 타고 산의 눈부신 풍경을 만나다">
 	<meta name="author" content="">
 
-	<title></title>
+	<title>YOLOTOUR</title>
 
 	<link href="./css/bootstrap.min.css" rel="stylesheet">
 	<link href="./css/main.css" rel="stylesheet">
@@ -17,26 +21,30 @@
     <header>
     	<nav>
 	    	<div class="text-center nav-wrap">
-	    		<div class="d-inline-block">
-		    		<div class="d-flex justify-content-end">
-			    		<ul class="nav-member">
-			    			<li><a href="#"><img src="./image/login.png"> 로그인</a></li>
-			    			<li><a href="#"><img src="./image/join.png"> 회원가입</a></li>
-			    		</ul>
+	    		<div class="container">
+		    		<div class="d-inline-block">
+			    		<div class="d-flex justify-content-end">
+				    		<ul class="nav-member">
+				    			<li><a href="#"><img src="./image/login.png"> 로그인</a></li>
+				    			<li><a href="#"><img src="./image/join.png"> 회원가입</a></li>
+				    		</ul>
+				    	</div>
+				    	<div class="widerow">
+					    	<div class="d-flex justify-content-center align-items-start">
+					    		<h1><a class="d-flex" href="./main.html"><img src="./image/logo.png"></a></h1>
+					    		<ul class="nav-menu">
+					    			<li><a href="#">동남아/대만/서남아</a></li>
+					    			<li><a href="#">중국/홍콩/하이난</a></li>
+					    			<li><a href="#">일본</a></li>
+					    			<li><a href="#">남태평양</a></li>
+					    			<li><a href="#">유럽/아프리카</a></li>
+					    			<li><a href="#">미주/중남미/하와이</a></li>
+					    			<li><a href="#">국내여행</a></li>
+					    		</ul>
+					    	</div>
+					    </div>
 			    	</div>
-			    	<div class="d-flex justify-content-center align-items-start">
-			    		<h1><a class="d-flex" href="./main.html"><img src="./image/logo.png"></a></h1>
-			    		<ul class="nav-menu">
-			    			<li><a href="#">동남아/대만/서남아</a></li>
-			    			<li><a href="#">중국/홍콩/하이난</a></li>
-			    			<li><a href="#">일본</a></li>
-			    			<li><a href="#">남태평양</a></li>
-			    			<li><a href="#">유럽/아프리카</a></li>
-			    			<li><a href="#">미주/중남미/하와이</a></li>
-			    			<li><a href="#">국내여행</a></li>
-			    		</ul>
-			    	</div>
-		    	</div>
+			    </div>
 	    	</div>
     	</nav>
     </header>
@@ -44,26 +52,28 @@
     <main role="main">
     	<section role="region" class="top">
     		<div class="d-flex align-items-end main-top">
-    			<div class="d-flex justify-content-center align-items-start reserv-wrap">
-	    			<ul class="reserv">
-	    				<li data-name="여행도시">
-	    					<input type="text" name="travcity">
-	    					<a href="#"><i class="location"></i></a>
-	    				</li>
-	    				<li data-name="출발도시">
-	    					<input type="text" name="startcity">
-	    					<a href="#"><i class="location"></i></a>
-	    				</li>
-	    				<li data-name="출발일자">
-	    					<input type="text" name="startdate">
-	    					<a href="#"><i class="calendar"></i></a>
-	    				</li>
-	    				<li data-name="도착일자">
-	    					<input type="text" name="enddate">
-	    					<a href="#"><i class="calendar"></i></a>
-	    				</li>
-	    				<li><a class="button" href="#">검색하기 ></a></li>
-	    			</ul>
+    			<div class="container reserv-wrap">
+    				<div class="row">
+		    			<ul class="d-flex justify-content-center align-items-center reserv">
+		    				<li data-name="여행도시">
+		    					<input type="text" name="travcity">
+		    					<a href="#"><i class="location"></i></a>
+		    				</li>
+		    				<li data-name="출발도시">
+		    					<input type="text" name="startcity">
+		    					<a href="#"><i class="location"></i></a>
+		    				</li>
+		    				<li data-name="출발일자">
+		    					<input type="text" name="startdate">
+		    					<a href="#"><i class="calendar"></i></a>
+		    				</li>
+		    				<li data-name="도착일자">
+		    					<input type="text" name="enddate">
+		    					<a href="#"><i class="calendar"></i></a>
+		    				</li>
+		    				<li><a class="button" href="#">검색하기 &gt;</a></li>
+		    			</ul>
+		    		</div>
 	    		</div>
     		</div>
     	</section>
@@ -75,56 +85,60 @@
 		    		</div>
 		    	</div>
 		    	<div class="row">
-		    		<div class="col-lg-6 latest-wrap left">
-		    			<div class="d-flex justify-content-end latest-card" data-content="BEST 1">
-			    			<a class="latest" href="#">
-			    				<img src="./image/best1.png">
-			    				<div class="content">
-				    				<h3>오사카 3일, 전일관광</h3>
-				    				<span>간사이 핵심지역을 돌아보는 오사카 2박3일 패키지 상품입니다.</span>
-				    				<span class="price">320,000원 ~ 1,520,000원</span>
-				    			</div>
-			    			</a>
+		    		<div class="d-flex justify-content-center">
+			    		<div class="col-lg-6 latest-wrap left">
+			    			<div class="d-flex justify-content-end latest-card" data-content="BEST 1">
+				    			<a class="latest" href="#">
+				    				<img src="./image/best1.png">
+				    				<div class="content">
+					    				<h3>오사카 3일, 전일관광</h3>
+					    				<span>간사이 핵심지역을 돌아보는 오사카 2박3일 패키지 상품입니다.</span>
+					    				<span class="price">320,000원 ~ 1,520,000원</span>
+					    			</div>
+				    			</a>
+				    		</div>
 			    		</div>
-		    		</div>
-		    		<div class="col-lg-6 latest-wrap">
-		    			<div class="d-flex justify-content-end latest-card" data-content="BEST 2" href="#">
-			    			<a class="latest" href="#">
-			    				<img src="./image/best2.png">
-			    				<div class="content">
-				    				<h3>끄라비 5,6일 핵심관광&amp;인기리조트</h3>
-				    				<span>끄라비 핵심관광 일정에 리조트의 품격을 더했습니다.<br/>조금은 특별한 끄라비 여행을 만들어보세요.</span>
-				    				<span class="price">452,000원 ~ 1,164,000원</span>
-				    			</div>
-			    			</a>
+			    		<div class="col-lg-6 latest-wrap">
+			    			<div class="d-flex justify-content-end latest-card" data-content="BEST 2" href="#">
+				    			<a class="latest" href="#">
+				    				<img src="./image/best2.png">
+				    				<div class="content">
+					    				<h3>끄라비 5,6일 핵심관광&amp;인기리조트</h3>
+					    				<span>끄라비 핵심관광 일정에 리조트의 품격을 더했습니다.<br/>조금은 특별한 끄라비 여행을 만들어보세요.</span>
+					    				<span class="price">452,000원 ~ 1,164,000원</span>
+					    			</div>
+				    			</a>
+				    		</div>
 			    		</div>
-		    		</div>
+			    	</div>
 		    	</div>
 		    	<div class="row">
-		    		<div class="col-lg-6 latest-wrap left">
-		    			<div class="d-flex justify-content-end latest-card" data-content="BEST 3" href="#">
-			    			<a class="latest" href="#">
-			    				<img src="./image/best3.png">
-			    				<div class="content">
-				    				<h3>사운드오브뮤직의 그곳 동유럽 4개국 8,9일</h3>
-				    				<span>사운드 오브 뮤직 속 풍경과 카를로비바리 온천 등<br/>로맨틱 유럽속으로 떠나보세요.</span>
-				    				<span class="price">520,000원 ~ 1,300,000원</span>
-				    			</div>
-			    			</a>
+		    		<div class="d-flex justify-content-center">
+			    		<div class="col-lg-6 latest-wrap left">
+			    			<div class="d-flex justify-content-end latest-card" data-content="BEST 3" href="#">
+				    			<a class="latest" href="#">
+				    				<img src="./image/best3.png">
+				    				<div class="content">
+					    				<h3>사운드오브뮤직의 그곳 동유럽 4개국 8,9일</h3>
+					    				<span>사운드 오브 뮤직 속 풍경과 카를로비바리 온천 등<br/>로맨틱 유럽속으로 떠나보세요.</span>
+					    				<span class="price">520,000원 ~ 1,300,000원</span>
+					    			</div>
+				    			</a>
+				    		</div>
 			    		</div>
-		    		</div>
-		    		<div class="col-lg-6 latest-wrap">
-		    			<div class="d-flex justify-content-end latest-card" data-content="BEST 4" href="#">
-			    			<a class="latest" href="#">
-			    				<img src="./image/best4.png">
-			    				<div class="content">
-				    				<h3>장가계/원가계 5,6일</h3>
-				    				<span>아바타 배경의 모티브 장가계 세계자연유산 기묘한 절경!<br/>수려한 산수와 중국역사까지 만나보세요</span>
-				    				<span class="price">400,000원 ~ 1,140,000원</span>
-				    			</div>
-			    			</a>
+			    		<div class="col-lg-6 latest-wrap">
+			    			<div class="d-flex justify-content-end latest-card" data-content="BEST 4" href="#">
+				    			<a class="latest" href="#">
+				    				<img src="./image/best4.png">
+				    				<div class="content">
+					    				<h3>장가계/원가계 5,6일</h3>
+					    				<span>아바타 배경의 모티브 장가계 세계자연유산 기묘한 절경!<br/>수려한 산수와 중국역사까지 만나보세요</span>
+					    				<span class="price">400,000원 ~ 1,140,000원</span>
+					    			</div>
+				    			</a>
+				    		</div>
 			    		</div>
-		    		</div>
+			    	</div>
 		    	</div>
     		</div>
     	</section>

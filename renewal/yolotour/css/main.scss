@@ -81,10 +81,11 @@ a { transition: color .2s; }
 a:hover { text-decoration: none; }
 
 .container { max-width: 100% !important; margin: 0; }
-.row { width: 68.75rem; margin: 0 auto; }
+.row { width: 69.75rem; margin: 0 auto; }
+.widerow { width: 73.3rem; margin: 0 auto; }
 
 a.button {
-	padding: .781rem 3.665rem;
+	padding: .813rem 2.5rem;
 	color: #fff;
 	background-color: $sky;
 	font-weight: bold;
