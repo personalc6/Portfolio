@@ -71,7 +71,7 @@ a:hover {
   margin: 0 auto; }
 
 .widerow {
-  width: 73.3rem;
+  width: 61.25rem;
   margin: 0 auto; }
 
 a.button {
@@ -108,7 +108,7 @@ nav {
       font-weight: bold; }
       nav .nav-wrap .nav-member li {
         display: inline-block;
-        font-size: .875rem;
+        font-size: .938rem;
         margin-left: 15px; }
     nav .nav-wrap .nav-menu {
       display: inline-block;
@@ -116,8 +116,11 @@ nav {
       margin: 0; }
       nav .nav-wrap .nav-menu li {
         display: inline;
-        margin-left: 2.375rem;
-        font-size: 1.125rem; }
+        margin-left: 1.463rem;
+        font-size: .938rem;
+        transition: font-size .2s; }
+        nav .nav-wrap .nav-menu li:nth-child(1) {
+          margin-left: 2.375rem !important; }
         nav .nav-wrap .nav-menu li a {
           padding-bottom: 2.25rem;
           border-bottom: solid 5px transparent;
@@ -504,5 +507,16 @@ nav {
           content: ""; }
     .footer .info p {
       margin: 0; }
+
+@media (min-width: 1200px) {
+  nav .nav-wrap .nav-member li {
+    font-size: 1.125rem; }
+
+  nav .nav-wrap .nav-menu li {
+    font-size: 1.125rem;
+    margin-left: 2.375rem; }
+
+  .widerow {
+    width: 73.3rem; } }
 
 /*# sourceMappingURL=main.css.map */
