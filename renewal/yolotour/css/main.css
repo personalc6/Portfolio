@@ -151,13 +151,13 @@ nav {
       display: block;
       padding: 0;
       margin: 4.125rem 0 0 0; }
-      .top .main-top .reserv-wrap .reserv li {
+      .top .main-top .reserv-wrap .reserv > li {
         position: relative;
         display: inline-block;
         margin-left: 3.75rem; }
-        .top .main-top .reserv-wrap .reserv li:nth-child(1) {
+        .top .main-top .reserv-wrap .reserv > li:nth-child(1) {
           margin-left: 0; }
-        .top .main-top .reserv-wrap .reserv li:before {
+        .top .main-top .reserv-wrap .reserv > li:before {
           position: absolute;
           content: attr(data-name);
           left: 0;
@@ -166,7 +166,7 @@ nav {
           color: #fff;
           font-weight: bold;
           font-size: .875rem; }
-        .top .main-top .reserv-wrap .reserv li input {
+        .top .main-top .reserv-wrap .reserv > li input {
           width: 10.75rem;
           height: 2.813rem;
           border: 0;
@@ -178,19 +178,75 @@ nav {
           -ms-border-radius: 2px;
           -o-border-radius: 2px;
           border-radius: 2px; }
-          .top .main-top .reserv-wrap .reserv li input ~ a {
+          .top .main-top .reserv-wrap .reserv > li input ~ i {
             position: absolute;
+            display: inline-block;
+            width: 1.125rem;
+            height: 1.438rem;
             top: 50%;
             right: 0;
-            transform: translate(-50%, -40%); }
-            .top .main-top .reserv-wrap .reserv li input ~ a .location {
+            transform: translate(-50%, -50%);
+            pointer-events: none; }
+            .top .main-top .reserv-wrap .reserv > li input ~ i.location {
               background-image: url("../image/location.png"); }
-            .top .main-top .reserv-wrap .reserv li input ~ a .calendar {
+            .top .main-top .reserv-wrap .reserv > li input ~ i.calendar {
               background-image: url("../image/calendar.png"); }
-            .top .main-top .reserv-wrap .reserv li input ~ a i {
-              display: inline-block;
-              width: 1.125rem;
-              height: 1.438rem; }
+          .top .main-top .reserv-wrap .reserv > li input:hover ~ i.calendar {
+            display: none; }
+        .top .main-top .reserv-wrap .reserv > li input[name="travcity"] ~ .citypicker, .top .main-top .reserv-wrap .reserv > li input[name="startcity"] ~ .citypicker {
+          position: absolute;
+          display: none;
+          width: 400px;
+          left: 0;
+          top: 100%;
+          color: #fff;
+          font-size: 13px;
+          font-weight: 100;
+          word-break: keep-all;
+          z-index: 20; }
+          .top .main-top .reserv-wrap .reserv > li input[name="travcity"] ~ .citypicker::after, .top .main-top .reserv-wrap .reserv > li input[name="startcity"] ~ .citypicker::after {
+            position: absolute;
+            content: " ";
+            left: 20px;
+            top: 0px;
+            transform: translate(0, -100%);
+            border-left: solid 10px transparent;
+            border-right: solid 10px transparent;
+            border-bottom: solid 10px rgba(0, 160, 233, 0.8); }
+          .top .main-top .reserv-wrap .reserv > li input[name="travcity"] ~ .citypicker .country, .top .main-top .reserv-wrap .reserv > li input[name="startcity"] ~ .citypicker .country {
+            position: relative;
+            background-color: rgba(0, 160, 233, 0.8);
+            width: 30%;
+            text-align: center;
+            padding: 1rem .5rem; }
+            .top .main-top .reserv-wrap .reserv > li input[name="travcity"] ~ .citypicker .country::before, .top .main-top .reserv-wrap .reserv > li input[name="startcity"] ~ .citypicker .country::before {
+              position: absolute;
+              content: " ";
+              left: 15px;
+              bottom: 0;
+              width: 320px;
+              height: 1px;
+              background-color: #fff; }
+          .top .main-top .reserv-wrap .reserv > li input[name="travcity"] ~ .citypicker > ul:nth-last-child(1) > .country::before, .top .main-top .reserv-wrap .reserv > li input[name="startcity"] ~ .citypicker > ul:nth-last-child(1) > .country::before {
+            display: none; }
+          .top .main-top .reserv-wrap .reserv > li input[name="travcity"] ~ .citypicker .city, .top .main-top .reserv-wrap .reserv > li input[name="startcity"] ~ .citypicker .city {
+            background-color: rgba(75, 74, 83, 0.8);
+            width: 70%;
+            padding: .5rem .8rem; }
+          .top .main-top .reserv-wrap .reserv > li input[name="travcity"] ~ .citypicker > ul > li, .top .main-top .reserv-wrap .reserv > li input[name="startcity"] ~ .citypicker > ul > li {
+            display: inline-block;
+            margin: 0; }
+            .top .main-top .reserv-wrap .reserv > li input[name="travcity"] ~ .citypicker > ul > li > ul > li, .top .main-top .reserv-wrap .reserv > li input[name="startcity"] ~ .citypicker > ul > li > ul > li {
+              display: inline-block; }
+              .top .main-top .reserv-wrap .reserv > li input[name="travcity"] ~ .citypicker > ul > li > ul > li:hover, .top .main-top .reserv-wrap .reserv > li input[name="startcity"] ~ .citypicker > ul > li > ul > li:hover {
+                cursor: pointer; }
+              .top .main-top .reserv-wrap .reserv > li input[name="travcity"] ~ .citypicker > ul > li > ul > li::after, .top .main-top .reserv-wrap .reserv > li input[name="startcity"] ~ .citypicker > ul > li > ul > li::after {
+                position: relative;
+                display: inline-block;
+                content: "|";
+                padding-left: .2rem; }
+              .top .main-top .reserv-wrap .reserv > li input[name="travcity"] ~ .citypicker > ul > li > ul > li:nth-last-child(1)::after, .top .main-top .reserv-wrap .reserv > li input[name="startcity"] ~ .citypicker > ul > li > ul > li:nth-last-child(1)::after {
+                display: none; }
 
 .best {
   width: 100%;

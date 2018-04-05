@@ -56,20 +56,308 @@
     				<div class="row">
 		    			<ul class="d-flex justify-content-between align-items-center reserv wm">
 		    				<li data-name="여행도시">
-		    					<input type="text" name="travcity">
-		    					<a href="#"><i class="location"></i></a>
+		    					<input type="text" name="travcity" class="input-city">
+		    					<i class="location"></i>
+		    					<div class="citypicker">
+		    						<ul class="d-flex">
+		    							<li class="d-flex align-items-center justify-content-center country">동남아/대만/서남아</li>
+		    							<li class="d-flex align-items-center city">
+		    								<ul>
+		    									<li>호치민</li>
+		    									<li>끄라비</li>
+		    									<li>라오스</li>
+		    									<li>세부</li>
+		    									<li>치앙마이</li>
+		    									<li>마닐라</li>
+		    									<li>포호리</li>
+		    									<li>푸켓</li>
+		    									<li>다낭</li>
+		    									<li>하노이</li>
+		    									<li>타이페이</li>
+		    									<li>방콕</li>
+		    									<li>보라카이</li>
+		    								</ul>
+		    							</li>
+		    						</ul>
+		    						<ul class="d-flex">
+		    							<li class="d-flex align-items-center justify-content-center country">중국/홍콩/하이난</li>
+		    							<li class="d-flex align-items-center city">
+		    								<ul>
+		    									<li>북경</li>
+		    									<li>상해</li>
+		    									<li>하이난</li>
+		    									<li>곤명</li>
+		    									<li>하문</li>
+		    									<li>청도</li>
+		    									<li>서안</li>
+		    									<li>백두산</li>
+		    									<li>중경</li>
+		    									<li>실크로드</li>
+		    									<li>하노이</li>
+		    									<li>타이페이</li>
+		    									<li>방콕</li>
+		    									<li>마카오</li>
+		    									<li>몽골</li>
+		    								</ul>
+		    							</li>
+		    						</ul>
+		    						<ul class="d-flex">
+		    							<li class="d-flex align-items-center justify-content-center country">일본</li>
+		    							<li class="d-flex align-items-center city">
+		    								<ul>
+		    									<li>오사카</li>
+		    									<li>도쿄</li>
+		    									<li>후쿠오카</li>
+		    									<li>삿포로</li>
+		    									<li>오키나와</li>
+		    									<li>나고야</li>
+		    									<li>아오모리</li>
+		    									<li>후라노</li>
+		    									<li>시즈오카</li>
+		    									<li>도야마</li>
+		    									<li>요나고</li>
+		    									<li>다카마츠</li>
+		    								</ul>
+		    							</li>
+		    						</ul>
+		    						<ul class="d-flex">
+		    							<li class="d-flex align-items-center justify-content-center country">남태평양</li>
+		    							<li class="d-flex align-items-center city">
+		    								<ul>
+		    									<li>괌</li>
+		    									<li>마리아나</li>
+		    									<li>팔라우</li>
+		    									<li>피지</li>
+		    									<li>타히티</li>
+		    									<li>호주</li>
+		    									<li>케언즈</li>
+		    									<li>에어즈락</li>
+		    									<li>뉴질랜드</li>
+		    									<li>크라이스트처치</li>
+		    									<li>로토루아</li>
+		    									<li>브리즈번</li>
+		    								</ul>
+		    							</li>
+		    						</ul>
+		    						<ul class="d-flex">
+		    							<li class="d-flex align-items-center justify-content-center country">유럽/아프리카</li>
+		    							<li class="d-flex align-items-center city">
+		    								<ul>
+		    									<li>영국</li>
+		    									<li>파리</li>
+		    									<li>루체른</li>
+		    									<li>모스크바</li>
+		    									<li>리스본</li>
+		    									<li>네덜란드</li>
+		    									<li>비엔나</li>
+		    									<li>부다페스트</li>
+		    									<li>오슬로</li>
+		    									<li>두브로브니크</li>
+		    									<li>바르셀로나</li>
+		    									<li>리스본</li>
+		    									<li>이스탄불</li>
+		    									<li>아테네</li>
+		    									<li>두바이</li>
+		    									<li>요르단</li>
+		    									<li>조지아</li>
+		    									<li>케이프타운</li>
+		    									<li>빅토리아 폭포</li>
+		    									<li>나이로비</li>
+		    									<li>이집트</li>
+		    									<li>모로코</li>
+		    								</ul>
+		    							</li>
+		    						</ul>
+		    						<ul class="d-flex">
+		    							<li class="d-flex align-items-center justify-content-center country">미주/중남미/하와이</li>
+		    							<li class="d-flex align-items-center city">
+		    								<ul>
+		    									<li>시애틀</li>
+		    									<li>샌프란시스코</li>
+		    									<li>로스엔젤레스</li>
+		    									<li>라스베이거스</li>
+		    									<li>그랜드캐넌</li>
+		    									<li>뉴욕</li>
+		    									<li>퀘백</li>
+		    									<li>워싱턴</li>
+		    									<li>마이애미</li>
+		    									<li>아틀란타</li>
+		    									<li>밴쿠버</li>
+		    									<li>로키</li>
+		    									<li>옐로나이프</li>
+		    									<li>앵커리지</li>
+		    									<li>캐나다</li>
+		    								</ul>
+		    							</li>
+		    						</ul>
+		    						<ul class="d-flex">
+		    							<li class="d-flex align-items-center justify-content-center country">국내</li>
+		    							<li class="d-flex align-items-center city">
+		    								<ul>
+		    									<li>제주도</li>
+		    									<li>부산</li>
+		    									<li>섬여행</li>
+		    									<li>기차여행</li>
+		    								</ul>
+		    							</li>
+		    						</ul>
+		    					</div>
 		    				</li>
 		    				<li data-name="출발도시">
-		    					<input type="text" name="startcity">
-		    					<a href="#"><i class="location"></i></a>
+		    					<input type="text" name="startcity" class="input-city">
+		    					<i class="location"></i>
+		    					<div class="citypicker">
+		    						<ul class="d-flex">
+		    							<li class="d-flex align-items-center justify-content-center country">동남아/대만/서남아</li>
+		    							<li class="d-flex align-items-center city">
+		    								<ul>
+		    									<li>호치민</li>
+		    									<li>끄라비</li>
+		    									<li>라오스</li>
+		    									<li>세부</li>
+		    									<li>치앙마이</li>
+		    									<li>마닐라</li>
+		    									<li>포호리</li>
+		    									<li>푸켓</li>
+		    									<li>다낭</li>
+		    									<li>하노이</li>
+		    									<li>타이페이</li>
+		    									<li>방콕</li>
+		    									<li>보라카이</li>
+		    								</ul>
+		    							</li>
+		    						</ul>
+		    						<ul class="d-flex">
+		    							<li class="d-flex align-items-center justify-content-center country">중국/홍콩/하이난</li>
+		    							<li class="d-flex align-items-center city">
+		    								<ul>
+		    									<li>북경</li>
+		    									<li>상해</li>
+		    									<li>하이난</li>
+		    									<li>곤명</li>
+		    									<li>하문</li>
+		    									<li>청도</li>
+		    									<li>서안</li>
+		    									<li>백두산</li>
+		    									<li>중경</li>
+		    									<li>실크로드</li>
+		    									<li>하노이</li>
+		    									<li>타이페이</li>
+		    									<li>방콕</li>
+		    									<li>마카오</li>
+		    									<li>몽골</li>
+		    								</ul>
+		    							</li>
+		    						</ul>
+		    						<ul class="d-flex">
+		    							<li class="d-flex align-items-center justify-content-center country">일본</li>
+		    							<li class="d-flex align-items-center city">
+		    								<ul>
+		    									<li>오사카</li>
+		    									<li>도쿄</li>
+		    									<li>후쿠오카</li>
+		    									<li>삿포로</li>
+		    									<li>오키나와</li>
+		    									<li>나고야</li>
+		    									<li>아오모리</li>
+		    									<li>후라노</li>
+		    									<li>시즈오카</li>
+		    									<li>도야마</li>
+		    									<li>요나고</li>
+		    									<li>다카마츠</li>
+		    								</ul>
+		    							</li>
+		    						</ul>
+		    						<ul class="d-flex">
+		    							<li class="d-flex align-items-center justify-content-center country">남태평양</li>
+		    							<li class="d-flex align-items-center city">
+		    								<ul>
+		    									<li>괌</li>
+		    									<li>마리아나</li>
+		    									<li>팔라우</li>
+		    									<li>피지</li>
+		    									<li>타히티</li>
+		    									<li>호주</li>
+		    									<li>케언즈</li>
+		    									<li>에어즈락</li>
+		    									<li>뉴질랜드</li>
+		    									<li>크라이스트처치</li>
+		    									<li>로토루아</li>
+		    									<li>브리즈번</li>
+		    								</ul>
+		    							</li>
+		    						</ul>
+		    						<ul class="d-flex">
+		    							<li class="d-flex align-items-center justify-content-center country">유럽/아프리카</li>
+		    							<li class="d-flex align-items-center city">
+		    								<ul>
+		    									<li>영국</li>
+		    									<li>파리</li>
+		    									<li>루체른</li>
+		    									<li>모스크바</li>
+		    									<li>리스본</li>
+		    									<li>네덜란드</li>
+		    									<li>비엔나</li>
+		    									<li>부다페스트</li>
+		    									<li>오슬로</li>
+		    									<li>두브로브니크</li>
+		    									<li>바르셀로나</li>
+		    									<li>리스본</li>
+		    									<li>이스탄불</li>
+		    									<li>아테네</li>
+		    									<li>두바이</li>
+		    									<li>요르단</li>
+		    									<li>조지아</li>
+		    									<li>케이프타운</li>
+		    									<li>빅토리아 폭포</li>
+		    									<li>나이로비</li>
+		    									<li>이집트</li>
+		    									<li>모로코</li>
+		    								</ul>
+		    							</li>
+		    						</ul>
+		    						<ul class="d-flex">
+		    							<li class="d-flex align-items-center justify-content-center country">미주/중남미/하와이</li>
+		    							<li class="d-flex align-items-center city">
+		    								<ul>
+		    									<li>시애틀</li>
+		    									<li>샌프란시스코</li>
+		    									<li>로스엔젤레스</li>
+		    									<li>라스베이거스</li>
+		    									<li>그랜드캐넌</li>
+		    									<li>뉴욕</li>
+		    									<li>퀘백</li>
+		    									<li>워싱턴</li>
+		    									<li>마이애미</li>
+		    									<li>아틀란타</li>
+		    									<li>밴쿠버</li>
+		    									<li>로키</li>
+		    									<li>옐로나이프</li>
+		    									<li>앵커리지</li>
+		    									<li>캐나다</li>
+		    								</ul>
+		    							</li>
+		    						</ul>
+		    						<ul class="d-flex">
+		    							<li class="d-flex align-items-center justify-content-center country">국내</li>
+		    							<li class="d-flex align-items-center city">
+		    								<ul>
+		    									<li>제주도</li>
+		    									<li>부산</li>
+		    									<li>섬여행</li>
+		    									<li>기차여행</li>
+		    								</ul>
+		    							</li>
+		    						</ul>
+		    					</div>
 		    				</li>
 		    				<li data-name="출발일자">
-		    					<input type="text" name="startdate">
-		    					<a href="#"><i class="calendar"></i></a>
+		    					<input type="date" name="startdate">
+		    					<i class="calendar"></i>
 		    				</li>
 		    				<li data-name="도착일자">
-		    					<input type="text" name="enddate">
-		    					<a href="#"><i class="calendar"></i></a>
+		    					<input type="date" name="enddate">
+		    					<i class="calendar"></i>
 		    				</li>
 		    				<li><a class="button" href="#">검색하기 &gt;</a></li>
 		    			</ul>

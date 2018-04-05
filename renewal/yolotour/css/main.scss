@@ -168,7 +168,7 @@ nav {
 				display: block;
 				padding: 0;
 				margin: 4.125rem 0 0 0;
-				li {
+				& > li {
 					position: relative;
 					display: inline-block;
 					margin-left: 3.75rem;
@@ -191,17 +191,82 @@ nav {
 						color: #fff;
 						background-color: #4b4a53;
 						@include border-radius(2px);
-						& ~ a {
+						& ~ i {
 							position: absolute;
+							display: inline-block;
+							width: 1.125rem;
+							height: 1.438rem;
 							top: 50%;
 							right: 0;
-							transform: translate(-50%, -40%);
-							.location { background-image: url("../image/location.png"); }
-							.calendar { background-image: url("../image/calendar.png"); }
-							i {
+							transform: translate(-50%, -50%);
+							pointer-events: none;
+							&.location { background-image: url("../image/location.png"); }
+							&.calendar { background-image: url("../image/calendar.png"); }
+						}
+						&:hover ~ i.calendar { display: none; }
+					}
+					input[name="travcity"] ~ .citypicker, input[name="startcity"] ~ .citypicker {
+						position: absolute;
+						display: none;
+						width: 400px;
+						left: 0;
+						top: 100%;
+						color: #fff;
+						font-size: 13px;
+						font-weight: 100;
+						word-break: keep-all;
+						z-index: 20;
+						&::after {
+							position: absolute;
+							content: " ";
+							left: 20px;
+							top: 0px;
+							transform: translate(0, -100%);
+							border-left: solid 10px transparent;
+							border-right: solid 10px transparent;
+							border-bottom: solid 10px rgba(0,160,233,.8);
+						}
+						.country {
+							position: relative;
+							background-color: rgba(0,160,233,.8);
+							width: 30%;
+							text-align: center;
+							padding: 1rem .5rem;
+							&::before {
+								position: absolute;
+								content: " ";
+								left: 15px;
+								bottom: 0;
+								width: 320px;
+								height: 1px;
+								background-color: #fff;
+							}
+						}
+						& > ul:nth-last-child(1) > .country::before { display: none; }
+						.city {
+							background-color: rgba(75,74,83,.8);
+							width: 70%;
+							padding: .5rem .8rem;
+						}
+						& > ul {
+							& > li {
 								display: inline-block;
-								width: 1.125rem;
-								height: 1.438rem;
+								margin: 0;
+								& > ul > li {
+									display: inline-block;
+									&:hover {
+										cursor: pointer;
+									}
+									&::after {
+										position: relative;
+										display: inline-block;
+										content: "|";
+										padding-left: .2rem;
+									}
+									&:nth-last-child(1)::after {
+										display: none;
+									}
+								}
 							}
 						}
 					}
