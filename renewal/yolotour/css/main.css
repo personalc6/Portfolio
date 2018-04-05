@@ -89,6 +89,9 @@ a.button {
   a.button:hover {
     background-color: #0083bf; }
 
+.wm {
+  width: 100%; }
+
 nav {
   position: fixed;
   top: 0;
@@ -202,17 +205,13 @@ nav {
     font-weight: bold;
     border-bottom: solid 2px #00a0e9; }
   .best .latest-wrap {
-    padding: 0 0 1rem 1rem; }
-    .best .latest-wrap.left {
-      padding: 0 1rem 1rem 0; }
+    margin-bottom: 1rem; }
     .best .latest-wrap .latest-card {
-      position: relative;
-      width: 34.25rem;
-      height: 31.25rem; }
+      position: relative; }
       .best .latest-wrap .latest-card:before {
         position: absolute;
         content: attr(data-content);
-        left: 0;
+        left: -20px;
         top: 19px;
         padding: 5.5px 46.672px;
         color: #fff;
@@ -223,11 +222,11 @@ nav {
       .best .latest-wrap .latest-card:after {
         position: absolute;
         content: " ";
-        left: 0;
+        left: -20px;
         top: 51px;
         border-top: solid 15px transparent;
         border-bottom: solid 15px transparent;
-        border-right: solid 35px #993e00;
+        border-right: solid 20px #993e00;
         z-index: 9; }
       .best .latest-wrap .latest-card .latest {
         width: 32.125rem;
